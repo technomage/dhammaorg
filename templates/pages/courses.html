@@ -1,0 +1,68 @@
+<template name="courses">
+{{willRenderCourseLocation}}
+{{setPageTitle "Courses"}}
+<table class="results-table table table-condensed">
+  {{>course_header}}
+  {{#each courses}}
+  {{>course_row}}
+  {{/each}}
+</table>
+</template>
+
+<template name="course_header">
+<thead>
+  <tr>
+    <td></td>
+    <td>Type</td>
+    <td>Dates</td>
+    <td>Status</td>
+    {{#if renderCourseLocation}}
+    <td>Location</td>
+    {{/if}}
+    <td>Comments</td>
+  </tr>
+</thead>
+</template>
+
+<template name="course_row">
+<tr> 
+  <td><a class="btn btn-mini btn-primary">Apply</a></td> 
+  <td class="course-type">
+    <a class="info" data-placement="bottom"
+      data-toggle="tooltip" href="#"
+      title="{{courseTypeInfo type}}"><i class="icon icon-info-sign"></i> {{courseTypeName type}}</a>
+    <br />
+  </td> 
+  <td class="course-date">
+    <span class="date">{{formatDate starts}}</span> 
+    {{#if ends}}
+    - 
+    <span class="date">{{formatDate ends}}</span>
+    {{/if}}
+    <br />
+  </td>
+  <td>
+    {{#if status}}
+    <span class="status status-{{status}}">{{courseStatusName status}}</span>
+    {{else}}
+      {{#key_value statuses}}
+      <div class="status">
+        {{titleCase key}}: <span class="status-{{value}}">{{courseStatusName value}}</span>
+      </div>
+      {{/key_value}}
+    {{/if}}
+  </td> 
+  {{#if renderCourseLocation}}
+  <td class="location">
+    {{#with location}}
+    <img src="{{thumbnail}}" class="pull-left" width=60 />
+    {{where}}<br />
+    {{>location_links}}
+    {{/with}}
+  </td> 
+  {{/if}}
+  <td class="comments">
+    {{comments}}
+  </td> 
+</tr>
+</template>

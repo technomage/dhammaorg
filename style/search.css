@@ -1,0 +1,13 @@
+#sidebar form {
+  padding: 10px 15px;
+}
+
+#search label {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#search-submit {
+  text-align: center;
+  width: 100px;
+}

@@ -1,0 +1,23 @@
+<head>
+  <title>Vipassana Meditation</title>
+</head>
+
+<body>
+  {{>main}}
+</body>
+
+<template name="main">
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div id="sidebar" class="span3">
+      {{>sidebar}}
+    </div>
+    <div id="content" class="span9">
+      {{>header}}
+      <section id="main">
+        {{#isolate}} {{renderPage}} {{/isolate}}        
+      </section>
+    </div>
+  </div>
+</div>
+</template>

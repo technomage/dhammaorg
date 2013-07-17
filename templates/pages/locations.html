@@ -1,0 +1,33 @@
+<template name="locations">
+{{willNotRenderCourseLocation}}
+<section id="locations">
+{{setPageTitle "Locations"}}
+{{#each locations}}
+{{>location_info}}
+<table class="results-table table table-condensed">
+{{! >course_header}}
+{{#each courses}}
+  {{>course_row}}
+{{/each}}
+</table>
+<hr />
+{{/each}}
+</section>
+</template>
+
+<template name="location_info">
+<div class="location-info">
+<img width=150 class="location-image" src="{{thumbnail}}" />
+<h3>{{name}}</h3>
+<h4>{{where}}</h4>
+{{>location_links}}
+</div>
+</template>
+
+<template name="location_links">
+<span class="location-links" class="btn-group">
+  <a target="_blank" class="btn btn-mini btn-link" href="{{website}}">Website</a>
+  <a target="_blank" class="btn btn-mini btn-link" href="{{map}}">Map</a>
+  <a target="_blank" class="btn btn-mini btn-link" href="mailto:{{contact}}">Contact</a>
+</span>
+</template>

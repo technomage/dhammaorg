@@ -1,0 +1,28 @@
+<template name="search">
+<form id="search-form">
+  <p class="hint">All fields are optional</p>
+  <label>For a</label>
+  <select id="attendee-type" class="input-medium">
+    {{#key_value attendeeTypes}}
+    <option value="{{key}}">{{value}}</option>
+    {{/key_value}}
+  </select>
+
+  <label>Wishing to attend a</label>
+  <select id="role-type" class="input-medium">
+    {{#each attendeeCourseTypes attendeeType}}
+    <option val="{{this}}">{{courseTypeName this}}</option>
+    {{/each}}
+  </select>
+  <label>Located near</label>
+  <input type="search" class="input-medium" placeholder="City, State, Province..."></input>
+  <label>Starting after</label>
+  <input name="starts" class="input-medium" type="date"></input>
+  <label>and/or ending before</label>
+  <input name="ends" class="input-medium" type="date"></input>
+  <br />
+  <a id="search-submit" class="btn btn-small btn-info">
+    <i class="icon-white icon-search"></i> Search 
+  </a>
+</form>
+</template>

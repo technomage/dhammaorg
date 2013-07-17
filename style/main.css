@@ -1,0 +1,115 @@
+/* CSS declarations go here */
+
+h1,h2,h3 {
+  color: #029;
+}
+
+h1 a {
+  color: #029;
+}
+
+body {
+  font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-top: 30px;
+}
+
+header {
+  text-align: center;
+}
+
+.flag {
+  display: inline-block;
+}
+
+#prehead {
+  padding: 30px 0px;
+}
+
+#leaf {
+  margin-top: 6px;
+}
+
+#main-buttons {
+  padding: 10px 15px;
+}
+
+.location-info {
+  margin-bottom: 20px;
+}
+
+.location-info h4 {
+  white-space: nowrap;
+}
+
+.location-image {
+  width: 150px;
+  float: left;
+  margin-right: 15px;
+}
+
+.location-links {
+  position: relative;
+  left: -6px;
+}
+
+.results-table {
+  font-size: 13px;
+}
+
+.results-table thead {
+  font-size: 12px;
+}
+
+.results-table .location img {
+  width: 60px;
+  margin-right: 5px;
+}
+
+.date {
+
+}
+
+.course-type a {
+  white-space: nowrap;
+  color: black;
+  text-decoration: none;
+}
+
+.comments, .hint {
+  color: #666;
+  font-style: italic;
+}
+
+.status {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.date {
+  white-space: nowrap;
+}
+
+.status-open {
+  color: green;
+}
+
+.status-waitlist {
+  color: orange;
+}
+
+.status-closed, .status-long_waitlist {
+  color: red;
+}
+
+figure.figure-small {
+  width: 25%;
+}
+
+figure.figure-medium {
+  width: 40%;
+}
+
+figcaption {
+  padding: 5px 0px;
+  font-size: 12px;
+}
