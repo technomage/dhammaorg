@@ -2,7 +2,7 @@ if Meteor.isClient
   Session.setDefault("attendeeType", "new")
   Session.setDefault("roleType", "attendee")
   
-  Template.search.events =
+  Template.search_form.events =
     "change select#attendee-type": (e, t) ->
       Session.set "attendeeType", $(e.target).val()
     "change select#role-type": (e, t) ->
@@ -13,6 +13,6 @@ if Meteor.isClient
       else
         Meteor.Router.to("/locations")
       
-  Template.search.attendeeType = -> Session.get "attendeeType"
-  Template.search.attendeeTypes = -> attendeeTypes
-  Template.search.attendeeCourseTypes = (attendeeType) -> attendeeCourseTypes[attendeeType]
+  Template.search_form.attendeeType = -> Session.get "attendeeType"
+  Template.search_form.attendeeTypes = -> attendeeTypes
+  Template.search_form.attendeeCourseTypes = (attendeeType) -> attendeeCourseTypes[attendeeType]

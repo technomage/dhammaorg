@@ -48,3 +48,9 @@ if Meteor.isClient
     if date.getYear() > new Date().getYear()
       dateFormat += " YYYY"
     moment(date).format(dateFormat)
+    
+  Handlebars.registerHelper "activeClass", (path) ->
+    if path == Meteor.Router.page()
+      "active"
+    else
+      ""

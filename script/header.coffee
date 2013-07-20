@@ -1,5 +1,5 @@
 if Meteor.isClient
-  Handlebars.registerHelper "setPageTitle", (title) ->
+  Handlebars.registerHelper "pageTitle", (title) ->
     Session.set("title", title)
     
   Template.header.hasTitle = ->

@@ -7,6 +7,28 @@
 </body>
 
 <template name="main">
+{{>select_layout}}
+{{#if selectedLayout 'prototype1'}}
+{{>prototype1}}
+{{else}}
+{{>prototype2}}
+{{/if}}
+</template>
+
+<template name="select_layout">
+<div id="select-layout" class="btn-group">
+  <a class="btn btn-mini btn-link dropdown-toggle" data-toggle="dropdown" href="#">
+    Select Layout
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#" id="prototype1">Sidebar</a></li>
+    <li><a href="#" id="prototype2">Navbar</a></li>
+  </ul>
+</div>
+</template>
+
+<template name="prototype1">
 <div class="container-fluid">
   <div class="row-fluid">
     <div id="sidebar" class="span3">
@@ -14,10 +36,24 @@
     </div>
     <div id="content" class="span9">
       {{>header}}
+      <hr />
       <section id="main">
         {{#isolate}} {{renderPage}} {{/isolate}}        
       </section>
     </div>
+  </div>
+</div>
+</template>
+
+<template name="prototype2">
+<div class="container">
+  <div id="content">
+    {{>header}}
+    {{>nav_horizontal}}
+    <hr />
+    <section id="main">
+      {{#isolate}} {{renderPage}} {{/isolate}}        
+    </section>
   </div>
 </div>
 </template>
