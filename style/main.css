@@ -53,6 +53,10 @@ header {
   width: 100%;
 }
 
+td.location img {
+  margin-right: 5px;
+}
+
 .location-links {
   position: relative;
   left: -6px;
