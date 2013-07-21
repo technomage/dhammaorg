@@ -9,7 +9,9 @@
 {{#each locations}}
 <div class="row">
   <div class="span3">
-    <img class="location-image" src="{{thumbnail}}" />
+    <div class="location-image-container">
+      <img class="location-image" src="{{thumbnail}}" />
+    </div>
   </div>
   <div class="span9">
     {{>location_info}}

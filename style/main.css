@@ -40,28 +40,6 @@ header {
   padding: 10px 15px;
 }
 
-.location-info {
-  margin-bottom: 20px;
-}
-
-.location-info h4 {
-  white-space: nowrap;
-}
-
-.location-image {
-  margin-top: 10px;
-  width: 100%;
-}
-
-td.location img {
-  margin-right: 5px;
-}
-
-.location-links {
-  position: relative;
-  left: -6px;
-}
-
 .results-table {
   font-size: 13px;
 }

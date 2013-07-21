@@ -1,3 +1,32 @@
+.location-info {
+  margin-bottom: 20px;
+}
+
+.location-info h4 {
+  white-space: nowrap;
+}
+
+.location-image-container {
+  position: relative;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+.location-image {
+  position: relative;
+  margin-top: 10px;
+  width: 100%;
+}
+
+td.location img {
+  margin-right: 5px;
+}
+
+.location-links {
+  position: relative;
+  left: -6px;
+}
+
 #locations-map-canvas {
   height: 340px;
   width: 100%;
