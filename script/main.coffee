@@ -14,8 +14,10 @@ if Meteor.isClient
         "home_verbose"
       else
         "home"
-    "/search": "search"
     "/locations": "locations"
+    "/courses": "courses"
+    "/contacts": "contacts"
+    "/resources": "resources"
     "/courses": "courses"
     "/the-technique": "the_technique"
     "/goenka": "goenka"

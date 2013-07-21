@@ -1,6 +1,10 @@
 <template name="locations">
 {{willNotRenderCourseLocation}}
 {{pageTitle "Locations"}}
+<div id="locations-map">
+  <div id="locations-map-canvas"></div>
+</div>
+<hr />
 <section id="locations">
 {{#each locations}}
 <div class="row">

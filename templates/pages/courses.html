@@ -1,6 +1,7 @@
 <template name="courses">
 {{willRenderCourseLocation}}
 {{pageTitle "Courses"}}
+{{>sort}}
 <table class="results-table table">
   {{>course_header}}
   {{#each courses}}
@@ -13,12 +14,12 @@
 <thead>
   <tr>
     <td></td>
-    <td>Type</td>
-    <td>Dates</td>
-    <td>Status</td>
     {{#if renderCourseLocation}}
+    <td>Type</td>
     <td>Location</td>
     {{/if}}
+    <td>Dates</td>
+    <td>Status</td>
     <td>Comments</td>
   </tr>
 </thead>
@@ -33,6 +34,15 @@
       title="{{courseTypeInfo type}}"><i class="icon icon-info-sign"></i> {{courseTypeName type}}</a>
     <br />
   </td> 
+  {{#if renderCourseLocation}}
+  <td class="location">
+    {{#with location}}
+    <img src="{{thumbnail}}" class="pull-left" width=60 />
+    {{where}}<br />
+    {{>location_links}}
+    {{/with}}
+  </td> 
+  {{/if}}
   <td class="course-date">
     <span class="date">{{formatDate starts}}</span> 
     {{#if ends}}
@@ -52,15 +62,6 @@
       {{/key_value}}
     {{/if}}
   </td> 
-  {{#if renderCourseLocation}}
-  <td class="location">
-    {{#with location}}
-    <img src="{{thumbnail}}" class="pull-left" width=60 />
-    {{where}}<br />
-    {{>location_links}}
-    {{/with}}
-  </td> 
-  {{/if}}
   <td class="comments">
     {{comments}}
   </td> 

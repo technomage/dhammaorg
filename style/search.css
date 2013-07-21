@@ -11,3 +11,15 @@
   text-align: center;
   width: 100px;
 }
+
+#search.horizontal {
+  margin: 15px auto;
+}
+
+.horizontal #search-submit {
+  margin-top: 20px;
+}
+
+.horizontal .control-group {
+  float: left;
+}

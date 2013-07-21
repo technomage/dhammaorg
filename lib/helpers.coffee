@@ -49,8 +49,8 @@ if Meteor.isClient
       dateFormat += " YYYY"
     moment(date).format(dateFormat)
     
-  Handlebars.registerHelper "activeClass", (path) ->
-    if path == Meteor.Router.page()
-      "active"
-    else
-      ""
+  Handlebars.registerHelper "activeIfCurrentPage", (page) ->
+    "active" if page == Meteor.Router.page()
+  
+  Handlebars.registerHelper "activeIf", (name, value) ->
+    "active" if Session.get name == value
