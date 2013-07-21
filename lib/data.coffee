@@ -47,10 +47,25 @@ if Meteor.isServer
   Meteor.startup ->
     Locations.remove {}
     Courses.remove {}
+    
+    #TODO make this work!
+    # pg = Meteor.require 'pg'
+    # Fiber = Meteor.require "fibers"
+    # 
+    # Fiber(->
+    #   pg.connect "postgres://localhost/osa", (err, client) ->
+    #     client.query "select * from locations where enabled=true", (err, result) ->
+    #       for row in result.rows
+    #         console.log(row)
+    #         Locations.insert row
+    # ).run()
+        
     # Fixtures
     Locations.insert
       key: "dhara"
       name: "Dhamma Dharā"
+      lat: 42.635845
+      long: -72.667957
       thumbnail: "images/dhara_garden.jpg"
       where: "Shelburne Falls, Massachusetts, United States"
       website: "http://www.dhara.dhamma.org/"
@@ -60,6 +75,8 @@ if Meteor.isServer
     Locations.insert
       key: "siri"
       name: "Dhamma Sirī"
+      lat: 32.490916
+      long: -96.291842
       thumbnail: "images/siri.jpg"
       where: "Kaufman, Texas, United States"
       website: "http://www.siri.dhamma.org/"
@@ -69,6 +86,8 @@ if Meteor.isServer
     Locations.insert
       key: "karuna"
       name: "Dhamma Karunā"
+      lat: 51.934200
+      long: -114.163045
       thumbnail: "images/karuna.jpg"
       where: "Bowden, Alberta, Canada"
       website: "http://www.karuna.dhamma.org/"
