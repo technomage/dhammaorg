@@ -1,0 +1,60 @@
+<template name="navbar">
+<ul id="navbar" class="nav nav-justified nav-tabs">
+  <li class="{{activeIfCurrentPage 'home'}} "><a href="/"><i
+        class="glyphicon glyphicon-home"></i></a></li>
+  <li class="{{activeIfCurrentPage 'about'}} dropdown">
+    <a class="dropdown-toggle" href="about" data-toggle="dropdown">
+      <i class="glyphicon glyphicon-leaf"></i> About Vipassana 
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu" id="about-menu">
+      <li><a href="the-technique">What is Vipassana?</a></li>
+      <li><a href="goenka">S.N. Goenka</a></li>
+      <li><a href="art-of-living">Art of Living</a></li>
+      <li><a href="code-of-discipline">Code of Discipline</a></li>
+      <li><a href="questions-and-answers">Questions & Answers</a></li>
+    </ul>
+  </li>
+  <li id="courses-nav-item" class="{{activeIfCurrentPage 'courses'}}">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      <i class="glyphicon glyphicon-search"></i> 
+      Courses 
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu" id="courses-menu">
+      <li><a href="courses">by Date or Course Type</a></li>
+      <li><a href="locations">by Location</a></li>
+      <li class="divider"></li>
+      <li><a href="contacts">Search Contacts</a></li>
+      <li class="divider"></li>
+      <li><a href="maps/worldwide">Map of Locations Worldwide</a></li>
+      <li><a href="maps/india-and-nepal">Map of Locations India & Nepal</a></li>
+    </ul>
+  </li>
+  <li class="{{activeIfCurrentPage 'resources'}} " href="resources">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      <i class="glyphicon glyphicon-book"></i> 
+      Resources
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu" id="resources-menu">
+      <li><a href="old-students">For Old Students</a></li>
+      <li><a href="media">Media Downloads</a></li>
+      <li><a href="app">Vipassana App</a></li>
+    </ul>
+  </li>
+  <li class="{{activeIfCurrentPage 'special_sites'}} ">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+      <i class="glyphicon glyphicon-asterisk"></i> 
+      Special Sites
+    <b class="caret"></b></a> 
+    <ul class="dropdown-menu" id="special-sites-menu">
+      <li><a href="#">Vipassana for Executives</a></li>
+      <li><a href="#">Vipassana for Prisons</a></li>
+      <li><a href="#">Children's Courses</a></li>
+      <li><a href="#">Vipassana Research Institute</a></li>
+      <li><a href="#">Global Pagoda</a></li>
+    </ul>
+  </li>
+</ul>
+</template>

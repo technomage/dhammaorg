@@ -13,11 +13,9 @@
 @courseTypeInfo =
   ten: "10-day Courses are an introductory course to Vipassana Meditation where the technique is taught step-by-step each day. The courses begin after a 2 - 4 pm registration period and orientation, followed by 10 full days of meditation, and end the morning of the 11th day by 7:30 am."
 
-@courseStatuses =
-  open: "Open"
-  closed: "Closed"
-  waitlist: "Waitlist"
-  long_waitlist: "Long Waitlist"
+@courseStatuses = [ "Filling Up", "Open", "Short Wait List", "Wait List", "Long Wait List", "Closed", "Course Full", "FULL" ]
+
+@studentCategories = [""]
 
 @attendeeTypes =
   new: "New Student"
@@ -42,97 +40,3 @@ if Meteor.isClient
     courseTypes[courseType]
   Handlebars.registerHelper "courseTypeInfo", (courseType) -> 
     courseTypeInfo[courseType]
-
-if Meteor.isServer
-  Meteor.startup ->
-    Locations.remove {}
-    Courses.remove {}
-    
-    #TODO make this work!
-    # pg = Meteor.require 'pg'
-    # Fiber = Meteor.require "fibers"
-    # 
-    # Fiber(->
-    #   pg.connect "postgres://localhost/osa", (err, client) ->
-    #     client.query "select * from locations where enabled=true", (err, result) ->
-    #       for row in result.rows
-    #         console.log(row)
-    #         Locations.insert row
-    # ).run()
-        
-    # Fixtures
-    Locations.insert
-      key: "dhara"
-      name: "Dhamma Dharā"
-      lat: 42.635845
-      long: -72.667957
-      thumbnail: "images/dhara_garden.jpg"
-      where: "Shelburne Falls, Massachusetts, United States"
-      website: "http://www.dhara.dhamma.org/"
-      map: "http://courses.dhamma.org/en-US/maps/dhara"
-      contact: "info@dhara.dhamma.org"
-      
-    Locations.insert
-      key: "siri"
-      name: "Dhamma Sirī"
-      lat: 32.490916
-      long: -96.291842
-      thumbnail: "images/siri.jpg"
-      where: "Kaufman, Texas, United States"
-      website: "http://www.siri.dhamma.org/"
-      map: "http://courses.dhamma.org/en-US/maps/siri"
-      contact: "info@siri.dhamma.org"
-      
-    Locations.insert
-      key: "karuna"
-      name: "Dhamma Karunā"
-      lat: 51.934200
-      long: -114.163045
-      thumbnail: "images/karuna.jpg"
-      where: "Bowden, Alberta, Canada"
-      website: "http://www.karuna.dhamma.org/"
-      map: "http://courses.dhamma.org/en/maps/karuna"
-      contact: "registration@karuna.dhamma.org"
-      
-    Courses.insert
-      location: Locations.findOne(key: "dhara")._id
-      type: "ten"
-      starts: new Date "July 7, 2013"
-      ends: new Date "July 17, 2013"
-      status: null
-      statuses:
-        men: "open"
-        women: "waitlist"
-        servers: "closed"
-        
-    Courses.insert
-      location: Locations.findOne(key: "siri")._id
-      type: "three"
-      starts: new Date "Aug 1, 2013"
-      ends: new Date "Aug 4, 2013"
-      status: "open"
-      statuses:
-        men: "open"
-        women: "open"
-        servers: "open"
-        
-    Courses.insert
-      location: Locations.findOne(key: "siri")._id
-      type: "ten"
-      starts: new Date "July 18, 2013"
-      ends: new Date "July 29, 2013"
-      status: null
-      statuses:
-        men: "open"
-        women: "long_waitlist"
-        servers: "open"
-        
-    Courses.insert
-      location: Locations.findOne(key: "karuna")._id
-      type: "one"
-      starts: new Date "Aug 25, 2013"
-      status: "open"
-      statuses:
-        men: "open"
-        women: "open"
-        servers: "open"

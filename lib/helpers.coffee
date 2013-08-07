@@ -54,3 +54,12 @@ if Meteor.isClient
   
   Handlebars.registerHelper "activeIf", (name, value) ->
     "active" if Session.get name == value
+
+  Handlebars.registerHelper "hasTitle", ->
+    Session.get("title")? and Session.get("title") != ""
+    
+  Handlebars.registerHelper "title", ->
+    Session.get("title")
+  
+  Handlebars.registerHelper "pageTitle", (title) ->
+    Session.set("title", title)

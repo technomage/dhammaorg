@@ -1,0 +1,73 @@
+<template name="courses">
+{{willRenderCourseLocation}}
+{{pageTitle "Courses"}}
+{{>sort}}
+<table class="results-table table">
+  {{! >course_header}}
+  {{#each courses}}
+  {{>course_row}}
+  {{/each}}
+</table>
+</template>
+
+<template name="course_header">
+<thead>
+  <tr>
+    <td></td>
+    {{#if renderCourseLocation}}
+    <td>Type</td>
+    <td>Location</td>
+    {{/if}}
+    <td>Dates</td>
+    <td>Status</td>
+    <td>Comments</td>
+  </tr>
+</thead>
+</template>
+
+<template name="course_row">
+<tr> 
+  <td><a class="btn btn-mini btn-primary">Apply</a></td> 
+  <td class="course-type">
+    <a class="info" data-placement="bottom"
+      data-toggle="tooltip" href="#"
+      title="{{course_type}}"><i class="icon icon-info-sign"></i> {{course_type_description}}</a>
+    <br />
+  </td> 
+  {{#if renderCourseLocation}}
+  <td class="location">
+    {{#with location}}
+    <img src="{{thumbnail}}" class="pull-left" width=60 />
+    {{where}}<br />
+    {{>location_links}}
+    {{/with}}
+  </td> 
+  {{/if}}
+  <td class="course-date">
+    <span class="date">{{formatDate course_start_date}}</span> 
+    {{#if course_end_date}}
+    - 
+    <span class="date">{{formatDate course_end_date}}</span>
+    {{/if}}
+    <br />
+  </td>
+  <td>
+    {{>course_status}}
+  </td> 
+  <td class="comments">
+    {{comments}}
+  </td> 
+</tr>
+</template>
+
+<template name="course_status">
+{{#if status}}
+<span class="status status-{{status}}">{{courseStatusName course_status}}</span>
+{{else}}
+  {{#key_value statuses}}
+  <div class="status">
+    {{titleCase key}}: <span class="status-{{value}}">{{courseStatusName value}}</span>
+  </div>
+  {{/key_value}}
+{{/if}}
+</template>

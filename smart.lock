@@ -5,8 +5,9 @@
       "HTML5-History-API": {},
       "router": {},
       "momentjs": {},
+      "npm": {},
       "require": {},
-      "npm": {}
+      "bootstrap-3": {}
     },
     "packages": {
       "HTML5-History-API": {
@@ -24,15 +25,20 @@
         "tag": "v2.1.0",
         "commit": "f421f51c2cb40093374a83adb932937da2f991d3"
       },
+      "npm": {
+        "git": "https://github.com/arunoda/meteor-npm.git",
+        "tag": "v0.1.4",
+        "commit": "68ab2b952ab21a5bbba879b37be9385ec8ff6d63"
+      },
       "require": {
         "git": "https://github.com/tomconnors/meteor-require.git",
         "tag": "v0.0.1",
         "commit": "1662154598db51d1291fbfcefcd7152e7255bcf6"
       },
-      "npm": {
-        "git": "https://github.com/arunoda/meteor-npm.git",
-        "tag": "v0.1.4",
-        "commit": "68ab2b952ab21a5bbba879b37be9385ec8ff6d63"
+      "bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-bootstrap-3.git",
+        "tag": "v0.2.8",
+        "commit": "8026f0beaa0274849adfcf8c53d919216b5e06ba"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",

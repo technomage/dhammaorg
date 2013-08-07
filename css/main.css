@@ -1,0 +1,144 @@
+/* CSS declarations go here */
+
+#select-layout {
+  display: fixed;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+h1,h2,h3 {
+  font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: #029;
+}
+
+h1 a {
+  color: #029;
+}
+
+body {
+  font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  margin-top: 30px;
+}
+
+header {
+  text-align: center;
+}
+
+header #wheel {
+  max-width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-right { text-align: right; }
+.align-left { text-align: left; }
+
+header .align-right { right: -20px }
+header .align-left { left: -20px }
+
+
+.btn-group > .dropdown-toggle:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.btn-group > .btn-group {
+  float: left;
+}
+.btn-group > .btn-group > .dropdown-toggle {
+  .border-radius(0);
+}
+.btn-group > .btn-group > .dropdown-toggle:first-child {
+     -webkit-border-top-left-radius: 4px;
+         -moz-border-radius-topleft: 4px;
+             border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+      -moz-border-radius-bottomleft: 4px;
+          border-bottom-left-radius: 4px;  
+}
+.btn-group > .btn-group > .dropdown-toggle:last-child {
+     -webkit-border-top-right-radius: 4px;
+         -moz-border-radius-topright: 4px;
+             border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+      -moz-border-radius-bottomright: 4px;
+          border-bottom-right-radius: 4px;
+}
+
+.flag {
+  display: inline-block;
+}
+
+#prehead {
+  padding: 30px 0px;
+}
+
+#leaf {
+  margin-top: 6px;
+}
+
+#main-buttons {
+  padding: 10px 15px;
+}
+
+.results-table {
+  font-size: 13px;
+}
+
+.results-table thead {
+  font-size: 12px;
+}
+
+.date {
+
+}
+
+.course-type a {
+  white-space: nowrap;
+  color: black;
+  text-decoration: none;
+}
+
+.comments, .hint {
+  color: #666;
+  font-style: italic;
+}
+
+.status {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.date {
+  white-space: nowrap;
+}
+
+.status-open {
+  color: green;
+}
+
+.status-waitlist {
+  color: orange;
+}
+
+.status-closed, .status-long_waitlist {
+  color: red;
+}
+
+figure.figure-small {
+  width: 25%;
+}
+
+figure.figure-medium {
+  width: 40%;
+}
+
+figcaption {
+  padding: 5px 0px;
+  font-size: 12px;
+}
+
+footer {
+  padding: 10px 0px;
+  text-align: center;
+}

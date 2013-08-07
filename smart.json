@@ -3,7 +3,8 @@
     "HTML5-History-API": {},
     "router": {},
     "momentjs": {},
+    "npm": {},
     "require": {},
-    "npm": {}
+    "bootstrap-3": {}
   }
 }
