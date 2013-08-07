@@ -50,7 +50,7 @@ if Meteor.isClient
     moment(date).format(dateFormat)
     
   Handlebars.registerHelper "activeIfCurrentPage", (page) ->
-    "active" if page == Meteor.Router.page()
+    "active" if window.location.pathname.search(page) > 0
   
   Handlebars.registerHelper "activeIf", (name, value) ->
     "active" if Session.get name == value

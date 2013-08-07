@@ -7,10 +7,10 @@ class Migration
     
   migrations: [
     target: Locations
-    query: "select * from locations where enabled=true"
+    queries: ["select * from locations where enabled=true"]
   ,
     target: Courses
-    query: "select courses.*, 
+    queries: ["select courses.*, 
       course_types.course_type as course_type, 
       course_types.description as course_type_description,
       locations.location_name as location_name,
@@ -25,7 +25,12 @@ class Migration
       on location_course_type_apps.location_id = locations.id
       where courses.canceled_flag = false
       and course_start_date > now()
-      and enrollment_open_date < now();"
+      and enrollment_open_date < now();"]
+  ,
+    target: Regions,
+    queries: [
+      "select id, parent_id, name from regions where parent_id = 122 order by id asc limit 8;"
+    ]
   ] 
 
   clear: -> 
@@ -34,13 +39,14 @@ class Migration
     
   insertFixtures: ->
     @pg.connect "postgres://localhost/osa", (err, client) =>
-      _.each @migrations, (migration) =>
-        client.query migration.query, (err, result) =>
-          for row in result.rows
-            @fiber((context) -> context.target.insert context.row).run(
-              row: row, 
-              target: migration.target
-            )
+      _.each @migrations, ( migration ) =>
+        for query in migration.queries
+          client.query query, (err, result) =>
+            for row in result.rows
+              console.log(migration.target._name)
+              @fiber((r) -> 
+                r.target.insert r.row
+              ).run( target: migration.target, row: row )
           
   require: (pkg) ->
     path = Npm.require 'path'
@@ -51,5 +57,5 @@ class Migration
     Npm.require(modulePath + '/' + pkg)
 
     
-  # if Meteor.isServer
-  #   Meteor.startup -> new Migration()
+    # if Meteor.isServer
+    #   Meteor.startup -> new Migration()

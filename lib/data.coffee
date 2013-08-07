@@ -1,5 +1,6 @@
 @Locations = new Meteor.Collection("locations")
 @Courses   = new Meteor.Collection("courses")
+@Regions   = new Meteor.Collection("regions")
 
 @courseTypes =  
   group:     "Group sitting" 

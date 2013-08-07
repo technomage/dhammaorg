@@ -3,13 +3,18 @@
 #select-layout {
   display: fixed;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0px;
+  right: 0px;
+  z-index: 10;
 }
 
 h1,h2,h3 {
   font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: #029;
+}
+
+h2 {
+  text-align: center;
 }
 
 h1 a {
@@ -18,11 +23,15 @@ h1 a {
 
 body {
   font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  margin-top: 30px;
 }
 
-header {
+#wrap {
+  
+}
+
+#header-container {
   text-align: center;
+  padding: 20px 0px 10px;
 }
 
 header #wheel {
@@ -37,33 +46,6 @@ header #wheel {
 header .align-right { right: -20px }
 header .align-left { left: -20px }
 
-
-.btn-group > .dropdown-toggle:not(:last-child) {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.btn-group > .btn-group {
-  float: left;
-}
-.btn-group > .btn-group > .dropdown-toggle {
-  .border-radius(0);
-}
-.btn-group > .btn-group > .dropdown-toggle:first-child {
-     -webkit-border-top-left-radius: 4px;
-         -moz-border-radius-topleft: 4px;
-             border-top-left-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-      -moz-border-radius-bottomleft: 4px;
-          border-bottom-left-radius: 4px;  
-}
-.btn-group > .btn-group > .dropdown-toggle:last-child {
-     -webkit-border-top-right-radius: 4px;
-         -moz-border-radius-topright: 4px;
-             border-top-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-      -moz-border-radius-bottomright: 4px;
-          border-bottom-right-radius: 4px;
-}
 
 .flag {
   display: inline-block;
@@ -136,9 +118,4 @@ figure.figure-medium {
 figcaption {
   padding: 5px 0px;
   font-size: 12px;
-}
-
-footer {
-  padding: 10px 0px;
-  text-align: center;
 }

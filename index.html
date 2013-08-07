@@ -8,8 +8,11 @@
 </body>
 
 <template name="main">
+<div id="wrap">
 {{>select_layout}}
 {{{renderLayout}}}
+<div id="push"></div>
+</div>
 {{>footer}}
 </template>
 
@@ -46,8 +49,11 @@
   <div id="content">
     {{>header}}
     {{>navbar}}
-    <section class="collapse horizontal" id="search">
+    <section class="collapse horizontal" id="course-search">
       {{>search_form_horizontal}}
+    </section>
+    <section class="collapse horizontal" id="location-search">
+      {{>location_search}}
     </section>
     <section id="main">
       {{#if hasTitle}}

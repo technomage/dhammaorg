@@ -25,10 +25,18 @@ if Meteor.isClient
     "/": "home"
     "/locations": "locations"
     "/courses": "courses"
+    "/courses/by-location": ->
+      $("#location-search").collapse("show")
+      $("#course-search").collapse(toggle: false).collapse("hide")
+      Meteor.Router.page()
+    "/courses/by-date": ->
+      $("#course-search").collapse("show")
+      $("#location-search").collapse(toggle: false).collapse("hide")
+      Meteor.Router.page()
     "/contacts": "contacts"
     "/maps": "maps"
     "/resources": "resources"
     "/courses": "courses"
-    "/the-technique": "the_technique"
-    "/goenka": "goenka"
+    "/about/the-technique": "the_technique"
+    "/about/goenka": "goenka"
     "/privacy": "privacy" 
