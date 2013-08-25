@@ -1,10 +1,33 @@
-.navbar {
-  max-width: 700px;
-  margin: 15px auto 0px;
+#nav-home {
+  width: 10%;
+}
+
+#nav-region {
+  width: 10%;
+}
+
+#nav-about {
+  width: 25%;
+}
+
+#nav-search {
+  width: 15%;
+}
+
+#nav-resources {
+  width: 20%;
+}
+
+#nav-special-sites {
+  width: 20%;
 }
 
 #navbar {
-  margin: 30px auto 0px;
+  margin: 20px auto 30px;
+}
+
+#navbar li {
+  text-align: center;
 }
 
 #navbar li a {
@@ -28,7 +51,11 @@
   text-align:center;
 }
 
-.navbar-inner .dropdown-menu {
-  text-align: left;
+ul.nav li.dropdown > ul.dropdown-menu {
+  text-align: center;
+  width: 100%;
 }
 
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+  display: block;    
+}

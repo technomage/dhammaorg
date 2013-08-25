@@ -8,7 +8,7 @@ if Meteor.isClient
     "change select#role-type": (e, t) ->
       Session.set "roleType", $(e.target).val()
     "click #search-submit": (e, t) ->
-      Meteor.Router.to("/courses")
+      Router.go("courses")
       
   Template.search_form.attendeeType = -> Session.get "attendeeType"
   Template.search_form.attendeeTypes = -> attendeeTypes

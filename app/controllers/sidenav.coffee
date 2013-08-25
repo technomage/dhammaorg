@@ -8,5 +8,4 @@ if Meteor.isClient
   Meteor.startup ->
     collapseNavIfMobile()
     $(window).resize -> collapseNavIfMobile()
-    Meteor.Router.beforeRouting ->
-      collapseNavIfMobile()
+    #Router.onBeforeRun -> collapseNavIfMobile()

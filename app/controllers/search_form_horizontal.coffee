@@ -8,8 +8,11 @@ if Meteor.isClient
     "change select#role-type": (e, t) ->
       Session.set "roleType", $(e.target).val()
     "click #search-submit": (e, t) ->
-      Meteor.Router.to("/courses")
+      Router.go("courses")
       
   Template.search_form_horizontal.attendeeType = -> Session.get "attendeeType"
   Template.search_form_horizontal.attendeeTypes = -> attendeeTypes
   Template.search_form_horizontal.attendeeCourseTypes = (attendeeType) -> attendeeCourseTypes[attendeeType]
+  
+  Template.search_form_horizontal.rendered = ->
+    $("#search-dates input").datepicker format: "yyyy/mm/dd"

@@ -9,7 +9,7 @@
 
 #search-submit {
   text-align: center;
-  width: 100px;
+  width: 100%;
 }
 
 #search.horizontal {
@@ -17,7 +17,7 @@
 }
 
 .horizontal #search-submit {
-  margin-top: 20px;
+  margin-top: 37px;
 }
 
 .horizontal .control-group {

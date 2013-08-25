@@ -1,10 +1,9 @@
 {
   "packages": {
     "HTML5-History-API": {},
-    "router": {},
     "momentjs": {},
-    "npm": {},
-    "require": {},
-    "bootstrap-3": {}
+    "bootstrap-3": {},
+    "bootstrap-datepicker2": {},
+    "router": {}
   }
 }

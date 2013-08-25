@@ -1,20 +1,16 @@
 /* CSS declarations go here */
 
-#select-layout {
-  display: fixed;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 10;
+#select-layout a {
+  font-size: 11px;
 }
 
-h1,h2,h3 {
+h1,h2,h3,h4 {
   font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: #029;
 }
 
 h2 {
-  text-align: center;
+  margin-bottom: 20px;
 }
 
 h1 a {
@@ -27,6 +23,10 @@ body {
 
 #wrap {
   
+}
+
+#main p {
+  text-align: justify;
 }
 
 #header-container {
@@ -107,12 +107,24 @@ header .align-left { left: -20px }
   color: red;
 }
 
+figure img {
+  width: 100%;
+}
+
 figure.figure-small {
-  width: 25%;
+  width: 20%;
 }
 
 figure.figure-medium {
   width: 40%;
+}
+
+figure.pull-right {
+  margin-left: 15px;
+}
+
+figure.pull-left {
+  margin-right: 15px;
 }
 
 figcaption {

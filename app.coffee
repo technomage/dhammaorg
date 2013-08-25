@@ -5,12 +5,10 @@ if Meteor.isClient
   Session.setDefault "layout", "navbar_prototype"
   Session.setDefault "header", "header_split"
   
-  Template.main.selectedLayout = (layoutName) ->
+  Template.layout.selectedLayout = (layoutName) ->
     Session.get("layout") == layoutName
     
-  Template.main.renderLayout = -> Template[Session.get("layout")]()
-    
-  Template.main.events =
+  Template.layout.events =
     "click #toggle-layout": () ->
       next = layouts.shift()
       layouts.push(next)
@@ -19,24 +17,4 @@ if Meteor.isClient
     "click #toggle-header": () ->
       next = headers.shift()
       headers.push(next)
-      Session.set "header", headers[0]
-    
-  Meteor.Router.add
-    "/": "home"
-    "/locations": "locations"
-    "/courses": "courses"
-    "/courses/by-location": ->
-      $("#location-search").collapse("show")
-      $("#course-search").collapse(toggle: false).collapse("hide")
-      Meteor.Router.page()
-    "/courses/by-date": ->
-      $("#course-search").collapse("show")
-      $("#location-search").collapse(toggle: false).collapse("hide")
-      Meteor.Router.page()
-    "/contacts": "contacts"
-    "/maps": "maps"
-    "/resources": "resources"
-    "/courses": "courses"
-    "/about/the-technique": "the_technique"
-    "/about/goenka": "goenka"
-    "/privacy": "privacy" 
+      Session.set "header", headers[0] 

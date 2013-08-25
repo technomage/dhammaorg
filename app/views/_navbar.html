@@ -1,8 +1,8 @@
 <template name="navbar">
-<ul id="navbar" class="nav nav-justified nav-tabs">
-  <li class="{{activeIfCurrentPage 'home'}} "><a href="/"><i
+<ul id="navbar" class="nav nav-tabs">
+  <li id="nav-home" class="{{activeIfHome}} "><a href="/" title="Home"><i
         class="glyphicon glyphicon-home"></i></a></li>
-  <li class="{{activeIfCurrentPage 'about'}} dropdown">
+  <li id="nav-about" class="{{activeIfCurrentPage 'about'}} dropdown">
     <a class="dropdown-toggle" href="/about" data-toggle="dropdown">
       <i class="glyphicon glyphicon-leaf"></i> About Vipassana 
       <b class="caret"></b>
@@ -15,23 +15,25 @@
       <li><a href="/about/questions-and-answers">Questions & Answers</a></li>
     </ul>
   </li>
-  <li id="courses-nav-item" class="{{activeIfCurrentPage 'courses'}}">
+  <li id="nav-search" class="{{activeIfCurrentPage 'courses'}} dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
       <i class="glyphicon glyphicon-search"></i> 
-      Courses 
+      Search
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu" id="courses-menu">
-      <li><a href="/courses/by-location">by Location</a></li>
-      <li><a href="/courses/by-date">by Date or Course Type</a></li>
+      <li><a href="/courses">Courses</a></li>
       <li class="divider"></li>
-      <li><a href="/contacts">Search Contacts</a></li>
+      <li><a href="/locations/by-region">Locations by Region</a></li>
+      <li><a href="/locations/by-airport">or Nearby Airport</a></li>
       <li class="divider"></li>
-      <li><a href="/maps/worldwide">Map of Locations Worldwide</a></li>
-      <li><a href="/maps/india-and-nepal">Map of Locations India & Nepal</a></li>
+      <li><a href="/map/worldwide">Worldwide Map</a></li>
+      <li><a href="/map/india-and-nepal">India & Nepal Map</a></li>
+      <li class="divider"></li>
+      <li><a href="/contacts">Contacts</a></li>
     </ul>
   </li>
-  <li class="{{activeIfCurrentPage 'resources'}} " href="/resources">
+  <li id="nav-resources" class="{{activeIfCurrentPage 'resources'}} dropdown" href="/resources">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
       <i class="glyphicon glyphicon-book"></i> 
       Resources
@@ -43,7 +45,7 @@
       <li><a href="/app">Vipassana App</a></li>
     </ul>
   </li>
-  <li class="{{activeIfCurrentPage 'special_sites'}} ">
+  <li id="nav-special-sites" class="{{activeIfCurrentPage 'special_sites'}} dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
       <i class="glyphicon glyphicon-asterisk"></i> 
       Special Sites
@@ -56,5 +58,7 @@
       <li><a href="#">Global Pagoda</a></li>
     </ul>
   </li>
+  <li id="nav-region"><a href="#" title="Select Region"><i
+        class="flag flag-us"></i></a></li>
 </ul>
 </template>

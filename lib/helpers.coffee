@@ -52,14 +52,17 @@ if Meteor.isClient
   Handlebars.registerHelper "activeIfCurrentPage", (page) ->
     "active" if window.location.pathname.search(page) > 0
   
+  Handlebars.registerHelper "activeIfHome", ->
+    "active" if window.location.pathname == "/"
+  
   Handlebars.registerHelper "activeIf", (name, value) ->
     "active" if Session.get name == value
 
   Handlebars.registerHelper "hasTitle", ->
     Session.get("title")? and Session.get("title") != ""
     
-  Handlebars.registerHelper "title", ->
-    Session.get("title")
-  
-  Handlebars.registerHelper "pageTitle", (title) ->
-    Session.set("title", title)
+  Handlebars.registerHelper "title", (title) ->
+    if typeof title == "string"
+      Session.set("title", title)
+    else
+      Session.get("title")
