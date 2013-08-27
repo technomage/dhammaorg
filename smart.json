@@ -4,6 +4,7 @@
     "momentjs": {},
     "bootstrap-3": {},
     "bootstrap-datepicker2": {},
-    "router": {}
+    "router": {},
+    "select2": {}
   }
 }
