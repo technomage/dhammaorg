@@ -8,16 +8,17 @@
   <div class="col-sm-9">
     <div class="location-info">
       <h2>{{dhamma_name}}</h2>
-      <h3>{{display_name}}</h3>
-      <h3>{{city}}</h3>
+      <h4>{{display_name}}</h4>
+      <h4>{{city}}</h4>
       {{>location_links}}
     </div>
-    <table class="results-table table table-condensed">
-    {{! >course_header}}
-    {{#each courses}}
-      {{>course_row}}
-    {{/each}}
-    </table>
   </div>
 </div>
+<h4>Courses at this location:</h4>
+<table class="results-table table">
+{{>course_header}}
+{{#each courses}}
+  {{>course_row}}
+{{/each}}
+</table>
 </template>

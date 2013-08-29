@@ -22,3 +22,6 @@ if Meteor.isClient
     
   Template.locations.courses = ->
     Courses.find { location_id: @id }, sort: { starts: 1 }
+
+  Template.location.courses = ->
+    Courses.find { location_id: @id }, sort: { starts: 1 }
