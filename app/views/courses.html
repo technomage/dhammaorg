@@ -2,9 +2,11 @@
 {{willRenderCourseLocation}}
 {{title "Courses"}}
 {{>search_form_horizontal}}
+<hr />
 {{>sort}}
+<hr />
 <table class="results-table table">
-  {{! >course_header}}
+  {{>course_header}}
   {{#each courses}}
   {{>course_row}}
   {{/each}}
@@ -15,8 +17,8 @@
 <thead>
   <tr>
     <td></td>
-    {{#if renderCourseLocation}}
     <td>Type</td>
+    {{#if renderCourseLocation}}
     <td>Location</td>
     {{/if}}
     <td>Dates</td>
@@ -27,19 +29,19 @@
 </template>
 
 <template name="course_row">
-<tr> 
-  <td><a class="btn btn-mini btn-primary">Apply</a></td> 
+<tr class="course-row"> 
+  <td><a class="btn btn-xs btn-primary">Apply</a></td> 
   <td class="course-type">
     <a class="info" data-placement="bottom"
-      data-toggle="tooltip" href="#"
-      title="{{course_type}}"><i class="icon icon-info-sign"></i> {{course_type_description}}</a>
+      data-toggle="tooltip" href="#" data-html="true"
+      title="{{course_type_description}}"><i class="icon icon-info-sign"></i> {{course_type}}</a>
     <br />
   </td> 
   {{#if renderCourseLocation}}
   <td class="location">
     {{#with location}}
-    <img src="{{thumbnail}}" class="pull-left" width=60 />
-    {{where}}<br />
+    <img src="{{header_image_path}}" class="pull-left" width=60 height=40 />
+    {{display_name}}<br />
     {{>location_links}}
     {{/with}}
   </td> 

@@ -1,37 +1,15 @@
 <template name="location_search">
 <div class="row">
   <div class="col-sm-6">
-    <div class="panel">
-      <div class="panel-heading">
-        Search by near-by Airport
-      </div>
-      <div class="input-group">
-        <span class="input-group-addon">
-          <i class="glyphicon glyphicon-plane"></i>
-        </span>
-        <input type="text" id="near-by-airport" placeholder="City or airport code..." />
-        <span class="input-group-btn">
-          <a href="/courses" class="btn btn-primary" type="button"><i class="glyphicon
-              glyphicon-search"></i></a>
-        </span>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="panel">
-      <div class="panel-heading">
-        Or Select a Region
-      </div>
-      <div class="input-group">
-        <span class="input-group-addon">
-          <i class="glyphicon glyphicon-globe"></i>
-        </span>
-        <select>
-          {{#each region}}
-          <option value="{{id}}">{{name}}</option>
-          {{/each}}
-        </select>
-      </div>
+    <div class="input-group">
+      <span class="input-group-addon">
+        <i class="glyphicon glyphicon-plane"></i>
+      </span>
+      <input class="form-control" type="text" id="near-by-airport" placeholder="City or airport code..." />
+      <span class="input-group-btn">
+        <a href="/courses" class="btn btn-primary" type="button"><i class="glyphicon
+            glyphicon-search"></i> Search</a>
+      </span>
     </div>
   </div>
 </div>

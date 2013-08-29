@@ -2,19 +2,21 @@
 {{willNotRenderCourseLocation}}
 {{title "Locations"}}
 {{>location_search}}
+<!--
 <div id="locations-map">
   <div id="locations-map-canvas"></div>
 </div>
+-->
 <hr />
 <section id="locations">
 {{#each locations}}
 <div class="row">
-  <div class="span3">
+  <div class="col-sm-3">
     <div class="location-image-container">
-      <img class="location-image" src="{{thumbnail}}" />
+      <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
     </div>
   </div>
-  <div class="span9">
+  <div class="col-sm-9">
     {{>location_info}}
     <table class="results-table table table-condensed">
     {{! >course_header}}
@@ -31,16 +33,17 @@
 
 <template name="location_info">
 <div class="location-info">
-<h3>{{name}}</h3>
-<h4>{{where}}</h4>
+<h3>{{dhamma_name}}</h3>
+<h4>{{display_name}}</h4>
+<h4>{{city}}</h4>
 {{>location_links}}
 </div>
 </template>
 
 <template name="location_links">
 <span class="location-links" class="btn-group">
-  <a target="_blank" class="btn btn-mini btn-link" href="{{website}}">Website</a>
-  <a target="_blank" class="btn btn-mini btn-link" href="{{map}}">Map</a>
-  <a target="_blank" class="btn btn-mini btn-link" href="mailto:{{contact}}">Contact</a>
+  <a target="_blank" class="btn btn-xs btn-link" href="{{website}}">Website</a>
+  <a target="_blank" class="btn btn-xs btn-link" href="{{map}}">Map</a>
+  <a target="_blank" class="btn btn-xs btn-link" href="mailto:{{contact}}">Contact</a>
 </span>
 </template>

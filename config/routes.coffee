@@ -10,8 +10,8 @@ about_pages = [
 Router.map ->
   @route "home", path: "/"
   @route "courses", path: "/courses"
-  @route "locations", path: "/locations"
-  @route "locations"
+  @route "locations", path: "/locations/by-airport"
+  @route "locations", path: "/locations/by-region"
   @route "contacts"
   @route "maps"
   @route "resources"

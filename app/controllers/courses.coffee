@@ -6,7 +6,7 @@ if Meteor.isClient
     $("a.info").tooltip()
     
   Template.course_row.location = ->
-    Locations.findOne _id: @location
+    Locations.findOne id: @location_id
 
   Handlebars.registerHelper "renderCourseLocation", ->
     Session.get "renderCourseLocation"

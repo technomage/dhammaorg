@@ -1,3 +1,12 @@
 #course-search .row {
   padding: 15px 0px;
 }
+
+#main .tooltip p {
+  text-align: left;
+}
+
+#main .tooltip p a {
+  color: #ccc;
+  font-weight: bold;
+}

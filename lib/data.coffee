@@ -1,6 +1,9 @@
-@Locations = new Meteor.Collection("locations")
-@Courses   = new Meteor.Collection("courses")
-@Regions   = new Meteor.Collection("regions")
+unless @Locations?
+  @Locations = new Meteor.Collection("locations")
+unless @Courses?
+  @Courses   = new Meteor.Collection("courses")
+unless @Regions?
+  @Regions   = new Meteor.Collection("regions")
 
 @courseTypes =  
   group:     "Group sitting" 
