@@ -1,0 +1,23 @@
+<template name="location">
+<div class="row">
+  <div class="col-sm-3">
+    <div class="location-image-container">
+      <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <div class="location-info">
+      <h2>{{dhamma_name}}</h2>
+      <h3>{{display_name}}</h3>
+      <h3>{{city}}</h3>
+      {{>location_links}}
+    </div>
+    <table class="results-table table table-condensed">
+    {{! >course_header}}
+    {{#each courses}}
+      {{>course_row}}
+    {{/each}}
+    </table>
+  </div>
+</div>
+</template>

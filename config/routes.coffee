@@ -12,6 +12,9 @@ Router.map ->
   @route "courses", path: "/courses"
   @route "locations", path: "/locations/by-airport"
   @route "locations", path: "/locations/by-region"
+  @route "location", 
+    path: "/locations/:sub_domain"
+    data: -> Locations.findOne( sub_domain: @params.sub_domain )
   @route "contacts"
   @route "maps"
   @route "resources"
