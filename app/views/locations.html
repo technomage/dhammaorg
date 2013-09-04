@@ -11,12 +11,12 @@
 <section id="locations">
 {{#each locations}}
 <div class="row">
-  <div class="col-sm-3">
+  <div class="col-sm-4">
     <div class="location-image-container">
       <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
     </div>
   </div>
-  <div class="col-sm-9">
+  <div class="col-sm-8">
     <div class="location-info">
       <h3><a href="/locations/{{sub_domain}}">{{dhamma_name}}</a></h3>
     <h4>{{display_name}}</h4>

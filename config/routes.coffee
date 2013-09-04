@@ -9,20 +9,32 @@ about_pages = [
 
 Router.map ->
   @route "home", path: "/"
-  @route "courses", path: "/courses"
-  @route "locations", path: "/locations/by-airport"
-  @route "locations", path: "/locations/by-region"
+  @route "courses", path: "/search/courses"
+  @route "locations", path: "/search/locations"
+  @route "regions",
+    path: "/search/regions"
+    data: ->
+      regions:
+        Regions.find parent_id: 122
+  @route "regions", 
+    path: "/search/regions/:parentId"
+    data: ->
+      regions:
+        Regions.find parent_id: parseInt( @params.parentId )
+      locations:
+        Locations.find region_id: @id
   @route "location", 
-    path: "/locations/:sub_domain"
+    path: "/search/locations/:sub_domain"
     data: -> Locations.findOne( sub_domain: @params.sub_domain )
-  @route "contacts"
-  @route "maps"
+  @route "contacts",
+    path: "/search/contacts"
+  @route "maps",
+    path: "/search/maps"
   @route "resources"
-  @route "courses"
   @route "privacy" 
   
-  @route "map_worldwide", path: "/map/worldwide"
-  @route "map_india_and_nepal", path: "/map/india-and-nepal"
+  @route "map_worldwide", path: "/search/maps/worldwide"
+  @route "map_india_and_nepal", path: "/search/maps/india-and-nepal"
 
   _.each about_pages, (page) =>
     pagePath = page.replace(/_/g,"-")

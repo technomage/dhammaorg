@@ -38,7 +38,7 @@ class Migration
   ,
     target: Regions,
     queries: [
-      "select id, parent_id, name from regions where parent_id = 122 order by id asc limit 8;"
+      "select id, parent_id, name from regions where enabled=true;"
     ]
   ] 
 
@@ -52,10 +52,11 @@ class Migration
         for query in migration.queries
           client.query query, (err, result) =>
             for row in result.rows
-              console.log migration.target._name, row
+              if migration.target._name == "regions"
+                console.log "Regions.insert( ", row ," ) "
               @fiber((r) -> 
                 r.target.insert r.row
               ).run( target: migration.target, row: row )
           
-# if Meteor.isServer
-#   Meteor.startup -> new Migration()
+              # if Meteor.isServer
+              #   Meteor.startup -> new Migration()

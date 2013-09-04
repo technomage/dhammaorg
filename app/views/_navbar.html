@@ -4,7 +4,7 @@
         class="glyphicon glyphicon-home"></i></a></li>
   <li id="nav-about" class="{{activeIfCurrentPage 'about'}} dropdown">
     <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-      <i class="glyphicon glyphicon-leaf"></i> About Vipassana 
+      <i class="glyphicon glyphicon-leaf"></i> About
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu" id="about-menu">
@@ -15,22 +15,33 @@
       <li><a href="/about/questions-and-answers">Questions & Answers</a></li>
     </ul>
   </li>
-  <li id="nav-search" class="{{activeIfCurrentPage 'courses'}} dropdown">
+  <li id="nav-search" class="{{activeIfCurrentPage 'search'}} dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
       <i class="glyphicon glyphicon-search"></i> 
       Search
       <b class="caret"></b>
     </a>
     <ul class="dropdown-menu" id="courses-menu">
-      <li><a href="/courses">Courses</a></li>
-      <li class="divider"></li>
-      <li><a href="/locations/by-region">Locations by Region</a></li>
-      <li><a href="/locations/by-airport">or Nearby Airport</a></li>
-      <li class="divider"></li>
-      <li><a href="/map/worldwide">Worldwide Map</a></li>
-      <li><a href="/map/india-and-nepal">India & Nepal Map</a></li>
-      <li class="divider"></li>
-      <li><a href="/contacts">Contacts</a></li>
+      <li>
+        <a href="/search/courses">Courses</a>
+      </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            Locations
+          </a>
+        <ul class="dropdown-menu">
+          <li><a href="/search/locations">By Nearby Airport</a></li>
+          <li><a href="/search/regions">By Region</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Maps</a>
+        <ul class="dropdown-menu">
+          <li><a href="/search/maps/worldwide">Worldwide</a></li>
+          <li><a href="/search/maps/india-and-nepal">India & Nepal</a></li>
+        </ul>
+      </li>
+      <li><a href="/search/contacts">Contacts</a></li>
     </ul>
   </li>
   <li id="nav-resources" class="{{activeIfCurrentPage 'resources'}} dropdown" href="/resources">

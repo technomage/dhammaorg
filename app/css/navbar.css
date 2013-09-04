@@ -7,11 +7,11 @@
 }
 
 #nav-about {
-  width: 25%;
+  width: 22%;
 }
 
 #nav-search {
-  width: 15%;
+  width: 18%;
 }
 
 #nav-resources {
@@ -23,7 +23,7 @@
 }
 
 #navbar {
-  margin: 20px auto 30px;
+  margin: 20px auto 0;
 }
 
 #navbar li {
@@ -51,15 +51,35 @@
   vertical-align: top;
 }
 
+ul.nav li.active > a, ul.nav li.active > a:hover {
+  border-color: #F3E2A3;
+  border-bottom-color: #FFF7C9;
+  background-color: #FFF7C9;
+}
+
+ul.nav > li > a:hover {
+  background-color: #FFFDEF;
+}
+
+ul.nav li a {
+  border-bottom-color: #F3E2A3;
+}
+
 .navbar-inner {
   text-align:center;
 }
 
 ul.nav li.dropdown > ul.dropdown-menu {
   text-align: center;
-  width: 100%;
+  width: 99%;
 }
 
 ul.nav li.dropdown:hover > ul.dropdown-menu{
   display: block;    
+}
+
+ul.nav ul.dropdown-menu ul.dropdown-menu {
+  position: absolute;
+  left: 95%;
+  top: 0;
 }

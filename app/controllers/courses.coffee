@@ -4,6 +4,7 @@ if Meteor.isClient
     
   Template.course_row.rendered = ->
     $("a.info").tooltip()
+    $("#attendee-type").select2( placeholder: "New Student" )
     
   Template.course_row.location = ->
     Locations.findOne id: @location_id

@@ -10,28 +10,50 @@ h1,h2,h3,h4 {
 }
 
 h2 {
-  margin-bottom: 20px;
+  margin: 0 -22px 35px -22px;
+  padding: 20px;
+  background-color: #FFF7C9;
+  border: solid #F3E2A3;
+  border-width: 0px 1px 1px 1px;
+  text-align: center;
 }
 
-h1 a {
+a {
   color: #029;
 }
 
 body {
   font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  color: #029;
 }
 
 #wrap {
   
 }
 
+.container {
+  background-color: white;
+}
+
+#main {
+  padding: 0px 22px;
+}
+
+#main p a {
+  text-decoration: underline;
+}
+
 #main p {
   text-align: justify;
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 25px;
+  color: #222;
 }
 
 #header-container {
   text-align: center;
-  padding: 20px 0px 10px;
+  padding: 25px 0px 20px 6%;
 }
 
 header #wheel {
@@ -120,14 +142,25 @@ figure.figure-medium {
 }
 
 figure.pull-right {
-  margin-left: 15px;
+  margin-left: 25px;
 }
 
 figure.pull-left {
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 figcaption {
   padding: 5px 0px;
   font-size: 12px;
+}
+
+.right-caret {
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+  border-left: 4px solid #000000;
+  display: inline-block;
+  height: 0;
+  opacity: 0.3;
+  vertical-align: top;
+  width: 0;
 }
