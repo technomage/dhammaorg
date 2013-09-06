@@ -4,7 +4,7 @@
     <div class="col-xs-4">
       <div class="form-group">
         <label>For a</label>
-        <select multiple id="attendee-type" class="input-sm">
+        <select class="form-control input-sm" multiple id="attendee-type" class="input-sm">
           {{#key_value attendeeTypes}}
           <option value="{{key}}">{{value}}</option>
           {{/key_value}}
@@ -12,7 +12,7 @@
       </div>
       <div class="form-group">
         <label>Course Type</label>
-        <select multiple id="role-type" class="input-sm">
+        <select class="form-control input-sm" multiple id="course-type" class="input-sm">
           {{#each attendeeCourseTypes attendeeType}}
           <option val="{{this}}">{{courseTypeName this}}</option>
           {{/each}}
@@ -42,7 +42,7 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
         <input name="near" class="form-control input-sm" placeholder="Optional"></input>
       </div>
-      <a id="search-submit" class="btn btn-info"><i class="icon-white icon-search"></i> Search</a>
+      <a id="search-submit" class="btn btn-default">Apply Search Filters</a>
     </div>
   </form>
   </template>

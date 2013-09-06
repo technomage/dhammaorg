@@ -1,21 +1,19 @@
 <template name="select_region">
-<div id="select-region" class="modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Select a Region</h4>
-      </div>
-      <div class="modal-body">
-        <select style="width:100%" name="region">
-          <option>United States</option>
-        </select>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+<div id="select-region" class="panel panel-default">
+  <div class="panel-body">
+    <h4>Select Region</h4>
+    <select style="width:100%" name="region">
+      <option>United States</option>
+    </select>
+    <hr />
+    <h4>Select Language</h4>
+    <select style="width:100%" name="region">
+      <option>English</option>
+    </select>
+    <hr />
+    <button type="button" class="btn btn-primary btn-sm">Save Preferences</button>
+    <button type="button" class="btn btn-default btn-sm float-right"
+      data-dismiss="modal">Cancel</button>
+  </div>
+</div>
 </template>

@@ -2,8 +2,13 @@
   padding: 15px 0px;
 }
 
-#main .tooltip p {
+#main .tooltip-inner p {
   text-align: left;
+  font-size: 13px;
+  line-height: 16px;
+  color: white;
+  margin-bottom: 0px;
+  padding: 5px;
 }
 
 #main .tooltip p a {

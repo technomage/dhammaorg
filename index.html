@@ -6,7 +6,7 @@
 </body>
 
 <template name="layout">
-<div id="wrap">
+<div class="theme-{{ theme }}" id="wrap">
 <div class="container">
   <div id="content">
     {{>header}}
@@ -22,24 +22,4 @@
 <div id="push"></div>
 </div>
 {{>footer}}
-</template>
-
-<template name="sidebar_prototype">
-<div class="container-fluid">
-  <div class="row-fluid">
-    <div id="sidebar" class="col-sm-3">
-      {{>sidebar}}
-    </div>
-    <div id="content" class="col-sm-9">
-      {{>header}}
-      {{#if hasTitle}}
-        <h2>{{ title }}</h2>
-      {{/if}}
-      <hr />
-      <section id="main">
-        {{#isolate}} {{yield}} {{/isolate}}
-      </section>
-    </div>
-  </div>
-</div>
 </template>

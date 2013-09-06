@@ -1,0 +1,12 @@
+.theme-yellow h2 {
+  margin: 20px -22px 35px -22px;
+  border: solid 1px #F3E2A3;
+  background-color: #FFF7C9;
+  padding: 22px;
+}
+
+.theme-yellow #search-form {
+  background-color: #FFFDEF;
+  border: solid #F3E2A3;
+  border-width: 0px 1px 1px;
+}

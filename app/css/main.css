@@ -10,11 +10,8 @@ h1,h2,h3,h4 {
 }
 
 h2 {
-  margin: 0 -22px 35px -22px;
-  padding: 20px;
-  background-color: #FFF7C9;
-  border: solid #F3E2A3;
-  border-width: 0px 1px 1px 1px;
+  font-weight: bold;
+  padding: 22px 0px;
   text-align: center;
 }
 

@@ -1,11 +1,10 @@
 <template name="navbar">
-<ul id="navbar" class="nav nav-tabs">
+<ul id="navbar" class="nav nav-pills">
   <li id="nav-home" class="{{activeIfHome}} "><a href="/" title="Home"><i
         class="glyphicon glyphicon-home"></i></a></li>
   <li id="nav-about" class="{{activeIfCurrentPage 'about'}} dropdown">
-    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+    <a class="dropdown-toggle" href="/about/the-technique" data-toggle="dropdown">
       <i class="glyphicon glyphicon-leaf"></i> About
-      <b class="caret"></b>
     </a>
     <ul class="dropdown-menu" id="about-menu">
       <li><a href="/about/the-technique">What is Vipassana?</a></li>
@@ -16,17 +15,17 @@
     </ul>
   </li>
   <li id="nav-search" class="{{activeIfCurrentPage 'search'}} dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="/search/courses">
       <i class="glyphicon glyphicon-search"></i> 
       Search
-      <b class="caret"></b>
     </a>
     <ul class="dropdown-menu" id="courses-menu">
       <li>
         <a href="/search/courses">Courses</a>
       </li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <a class="dropdown-toggle" data-toggle="dropdown"
+            href="/search/locations">
             Locations
           </a>
         <ul class="dropdown-menu">
@@ -48,7 +47,6 @@
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
       <i class="glyphicon glyphicon-book"></i> 
       Resources
-      <b class="caret"></b>
     </a>
     <ul class="dropdown-menu" id="resources-menu">
       <li><a href="/old-students">For Old Students</a></li>
@@ -60,7 +58,6 @@
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
       <i class="glyphicon glyphicon-asterisk"></i> 
       Special Sites
-    <b class="caret"></b></a> 
     <ul class="dropdown-menu" id="special-sites-menu">
       <li><a href="#">Vipassana for Executives</a></li>
       <li><a href="#">Vipassana for Prisons</a></li>
@@ -69,8 +66,10 @@
       <li><a href="#">Global Pagoda</a></li>
     </ul>
   </li>
-  <li id="nav-region"><a href="#" title="Select Region"><i
-        class="flag flag-us"></i></a></li>
+  <li id="nav-region" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" title="Select
+      Region and Language"><i class="glyphicon glyphicon-globe"></i></a>
+  </li>
+  {{>select_region}}
 </ul>
-{{>select_region}}
 </template>
