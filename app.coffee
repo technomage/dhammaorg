@@ -2,7 +2,7 @@ if Meteor.isClient
   themes = ["blue", "yellow"]
   headers = ["header_split", "header_inline"]
 
-  Session.setDefault "theme", "yellow"
+  Session.setDefault "theme", "blue"
   Session.setDefault "header", "header_split"
   
   Template.layout.theme = ->
