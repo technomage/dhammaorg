@@ -1,6 +1,6 @@
 <template name="courses">
 {{willRenderCourseLocation}}
-<h2>Search Courses</h2>
+<h2>Courses</h2>
 <div class="well well-sm">
 <br />
 {{>search_form_horizontal}}
@@ -22,6 +22,7 @@
 </table>
 {{/if}}
 {{#if styleIs "map"}}
+<iframe height=600 width="100%" src="http://courses.dhamma.org/en/maps/001"></iframe>
 {{/if}}
 </template>
 

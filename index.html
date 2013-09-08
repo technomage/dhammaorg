@@ -10,8 +10,10 @@
 <div class="theme-{{ theme }}" id="wrap">
 <div class="container">
   <div id="content">
-    {{>header}}
-    {{>navbar}}
+    <section id="top">
+      {{>header}}
+      {{>navbar}}
+    </section>
     <section id="main">
       {{#if hasTitle}}
         <h2>{{ title }}</h2>
