@@ -2,14 +2,15 @@ if Meteor.isClient
   Template.courses.courses = ->
     Courses.find { canceled_flag: false }, { sort: { course_start_date: 1 } }
     
-  Template.course_row.rendered = ->
+  Template.course_row.rendered = Template.course.rendered = ->
     $("a.info").tooltip()
-    $("#attendee-type").select2( placeholder: "New Student" )
-    $("#course-type").select2( placeholder: "10 Day Course" )
     
-  Template.course_row.location = ->
+  Template.course_row.location = Template.course.location = ->
     Locations.findOne id: @location_id
-
+    
+  Template.courses.styleIs = (style) ->
+    Session.get("courseViewStyle") == style
+    
   Handlebars.registerHelper "renderCourseLocation", ->
     Session.get "renderCourseLocation"
     

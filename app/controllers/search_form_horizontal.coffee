@@ -16,3 +16,5 @@ if Meteor.isClient
   
   Template.search_form_horizontal.rendered = ->
     $("#search-dates input").datepicker format: "yyyy/mm/dd"
+    $("#attendee-type").select2( placeholder: "New Student" )
+    $("#course-type").select2( placeholder: "10 Day Course" )

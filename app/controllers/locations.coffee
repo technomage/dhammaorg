@@ -26,9 +26,16 @@ if Meteor.isClient
   Template.location.courses = ->
     Courses.find { location_id: @id }, sort: { starts: 1 }
     
+  Template.location.anyCourses = ->
+    Courses.find({ location_id: @id }).count() > 0
+
+    
   Template.locations.rendered = ->
     $(".location-image-container img").css "top", (i, old) ->
       $(@).css "top", (Math.min( 0, (200 - $(@).height())/2 ) + "px")
+      
+    $(".location-info .dhamma-name a").click ->
+      scroll(0,0)
     
     # Parallax (very slow in firefox...)
     # redraw = true
