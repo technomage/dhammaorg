@@ -31,20 +31,45 @@
   text-align: center;
 }
 
+#navbar.nav-pills > li > a:hover,
+#navbar.nav-pills > li.active > a,
+#navbar.nav-pills > li.active > a:hover {
+  background-color: transparent;
+  color: #029;
+}
+
 #navbar.nav-pills > li + li {
   margin-left: 0px;
 }
 
 #navbar li a {
+  z-index: 10;
   white-space: nowrap;
 }
 
+#navbar > li > a {
+  font-size: 16px;
+}
+
 #navbar > li.dropdown > .dropdown-menu {
-  top: 96%;
+  z-index: 1;
+  padding: 45px 0px 10px;
+  top: -10px;
+  min-width: 0;
 }
 
 #navbar .dropdown-menu > li > a {
   white-space: normal;
+  color: #029;
+  border: solid transparent;
+  border-width: 1px 0px 1px;
+}
+
+#navbar .dropdown-menu > li > a:hover {
+  background-color: #FFF7C9;
+  border: solid #EFC72A;
+  border-width: 1px 0px 1px 0px;
+  color: black;
 }
 
 #select-region {

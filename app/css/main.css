@@ -9,10 +9,22 @@ h1,h2,h3,h4,h5,h6 {
   color: #029;
 }
 
+h1 {
+  font-size: 33px;
+}
+
 h2 {
-  font-weight: bold;
-  padding: 22px 0px;
-  text-align: center;
+  font-size: 22px;
+  padding: 20px 0px;
+  margin: 35px -22px 35px -22px;
+  border-width: 2px 0px 2px 0px;
+  padding: 18px 22px;
+  border-style: solid;
+  border-width: 2px 0px 2px 0px;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 a {
@@ -43,7 +55,6 @@ body {
 #main p {
   text-align: justify;
   margin-bottom: 25px;
-  font-size: 16px;
   line-height: 25px;
   color: #222;
 }
