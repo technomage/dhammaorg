@@ -10,10 +10,7 @@ class Migration
     
   migrations: [
     target: Locations
-    queries: ["select * from locations 
-      where enabled=true
-      and location_type_id=6
-      and sub_domain not in (#{exclude})"]
+    queries: ["select locations.*, countries.name as country from locations left join countries on countries.id = locations.country_id where locations.enabled=true and location_type_id=6 and sub_domain not in (#{exclude})"]
   ,
     target: Courses
     queries: ["select courses.*, 

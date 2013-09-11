@@ -36,6 +36,18 @@ if Meteor.isClient
       
     $(".location-info .dhamma-name a").click ->
       scroll(0,0)
+      
+    $("#locations-carousel").carouFredSel(
+      auto: false
+      circular: false
+      infinite: false
+      item:
+        filter: ".carousel-item"
+      prev:
+        button: "#locations-prev"
+      next:
+        button: "#locations-next"
+    )
     
     # Parallax (very slow in firefox...)
     # redraw = true

@@ -1,0 +1,55 @@
+.image_carousel {
+  padding: 15px 0 15px 25px;
+  position: relative;
+}
+.image_carousel img {
+  padding: 9px;
+  margin: 7px 7px 0px;
+  display: block;
+  float: left;
+}
+
+a.prev, a.next {
+  width: 45px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: 55px;
+}
+a.prev { left: -22px; }
+a.next { right: -42px; }
+a.prev.disabled, a.next.disabled {
+  cursor: default;
+}
+
+a.prev.disabled span, a.next.disabled span {
+  cursor: default;
+  color: #ccc; 
+}
+
+a.prev:hover, a.next:hover {
+  text-decoration: none;
+}
+
+a.prev:hover span, a.next:hover span {
+  color: black;
+}
+
+a.prev.disabled:hover span, a.next.disabled:hover span {
+  color: #ccc;
+}
+
+a.prev span, a.next span {
+  font-weight: bold;
+  font-size: 40px;
+  color: #888;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+.carousel-item {
+  float: left;
+}

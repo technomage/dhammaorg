@@ -18,6 +18,12 @@
   width: 100%;
 }
 
+.meta {
+  display: block;
+  text-align: center;
+  clear: both;
+}
+
 td.location img {
   margin-right: 5px;
   width: 60px;

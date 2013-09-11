@@ -6,6 +6,7 @@
     "bootstrap-datepicker2": {},
     "router": {},
     "select2": {},
-    "npm": {}
+    "npm": {},
+    "carouFredSel": {}
   }
 }

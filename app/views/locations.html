@@ -7,32 +7,23 @@
   <div id="locations-map-canvas"></div>
 </div>
 -->
-<hr />
 <section id="locations">
-{{#each locations}}
-<div class="row">
-  <div class="col-sm-4">
-    <div class="location-image-container">
-      <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
-    </div>
+<div class="image_carousel">
+  <div id="locations-carousel">
+  {{#each locations}}
+  <div class="carousel-item">
+    <img height=120 width=155 name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" src="{{ header_image_path }}" />
+    <span class="meta">
+      <a href="/search/locations/{{sub_domain}}">{{dhamma_name}}</a><br />
+      {{city}}, {{country}}
+    </span>
   </div>
-  <div class="col-sm-8">
-    <div class="location-info">
-      <h3 class="dhamma-name"><a href="/search/locations/{{sub_domain}}">{{dhamma_name}}</a></h3>
-      <h4>{{display_name}}</h4>
-      <h4>{{city}}</h4>
-      {{>location_links}}
-    </div>
-    <table class="results-table table table-condensed">
-    {{! >course_header}}
-    {{#each courses}}
-      {{>course_row}}
-    {{/each}}
-    </table>
+  {{/each}}
   </div>
+  <div class="clearfix"></div>
+  <a class="prev" id="locations-prev" href="#"><span>&lt;</span></a>
+  <a class="next" id="locations-next" href="#"><span>&gt;</span></a>
 </div>
-<hr />
-{{/each}}
 </section>
 </template>
 
