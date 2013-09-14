@@ -1,14 +1,4 @@
-if Meteor.isClient
-  Session.setDefault "oldStudent", false
-  
-  Template.courses.events = 
-    "change input[name=oldStudent]": (e) ->
-      old = ( e.target.checked == true )
-      Session.set "oldStudent", old
-      Session.set "attendeeType", if old then "old" else "new"
-      
-  Template.courses.oldStudent = -> Session.get("oldStudent")
-      
+if Meteor.isClient 
   Template.courses.courses = ->
     Courses.find { canceled_flag: false }, { sort: { course_start_date: 1 } }
     

@@ -30,7 +30,7 @@
 <thead>
   <tr>
     <td></td>
-    <td>Type</td>
+    <td><i class="glyphicon glyphicon-sort"></i> Type</td>
     <td>Dates</td>
     {{#if renderCourseLocation}}
     <td>Location</td>
@@ -73,7 +73,7 @@
       <span class="date">{{formatDate course_end_date}}</span>
       {{/if}}
     </h4>
-    <a class="btn btn-lg btn-primary">Apply</a>
+    <a class="btn btn-default">Apply</a>
     {{#if comments_html}}
     <p class="comments">
       <br />
@@ -86,7 +86,7 @@
 
 <template name="course_row">
 <tr class="course-row"> 
-  <td><a class="btn btn-xs btn-primary">Apply</a></td> 
+  <td><a class="btn btn-primary">Apply</a></td> 
   <td class="course-type">
     <a class="info" data-placement="bottom"
       data-toggle="tooltip" href="#" data-html="true"

@@ -1,5 +1,10 @@
 /* CSS declarations go here */
 
+
+#home-content figure {
+  margin-bottom: 30px;
+}
+
 #select-layout a {
   font-size: 11px;
 }
