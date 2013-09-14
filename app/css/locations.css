@@ -55,9 +55,16 @@ td.location img {
 }
 
 .location-links {
-  margin-bottom: 20px;
   position: relative;
-  left: -6px;
+  left: -10px;
+}
+
+.center {
+  text-align: center;
+}
+
+#selected-location .location-links {
+  margin-bottom: 20px;
 }
 
 .location-body h3 {

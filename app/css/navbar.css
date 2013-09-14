@@ -4,6 +4,7 @@
 
 #nav-region {
   width: 10%;
+  z-index: 30;
 }
 
 #nav-about {
@@ -73,11 +74,10 @@
 }
 
 #select-region {
-  z-index: 10;
+  z-index: 20;
   display: none;
   width: 300px;
   position: absolute;
-  top: 42px;
   right: 0;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -119,3 +119,11 @@ ul.nav li.active.dropdown a.dropdown-toggle .caret {
   border-top-color: white;
   border-bottom-color: white;
 }
+
+// #nav-region:hover + #select-region {
+//   display: block;
+// }
+// 
+// #select-region:hover {
+//   display: block;
+// }

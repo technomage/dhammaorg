@@ -1,33 +1,12 @@
 <template name="sort">
-<div id="sort" class="row">
-  <div class="col-md-4">
-    <div class="btn-group">
-      <a class="btn btn-link disabled">View</a>
-      <a id="view-list" class="btn btn-link">
-        <i class="glyphicon glyphicon-th-list icon-white"></i> List</a>
-      <a id="view-table" class="btn btn-link">
-        <i class="glyphicon glyphicon-list-alt icon-white"></i> Table</a>
-      <a id="view-map" class="btn btn-link">
-        <i class="glyphicon glyphicon-globe icon-white"></i> Map</a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="btn-group">
-      <a class="btn btn-link disabled">Sort</a>
-      <a class="btn btn-link {{activeIf sort date}}" data-sort="date">
-      <i class="glyphicon glyphicon-calendar icon-white"></i> Date</a>
-    <a class="btn btn-link {{activeIf sort status}}" data-sort="status">
-      <i class="glyphicon glyphicon-question-sign icon-white"></i> Status</a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="btn-group">
-      <a class="btn btn-link disabled">Filter</a>
-      <a class="btn btn-link" data-sort="date">
-        <i class="glyphicon glyphicon-question-sign icon-white"></i> Status</a>
-      <a class="btn btn-link" data-sort="language">
-      <i class="glyphicon glyphicon-white glyphicon-flag"></i> Language</a>
-    </div>
+<div class="btn-toolbar center">
+  <div class="btn-group">
+    <a id="view-list" class="btn btn-default">
+      <i class="glyphicon glyphicon-th-list icon-white"></i> List</a>
+    <a id="view-table" class="btn btn-default">
+      <i class="glyphicon glyphicon-list-alt icon-white"></i> Table</a>
+    <a id="view-map" class="btn btn-default">
+      <i class="glyphicon glyphicon-globe icon-white"></i> Map</a>
   </div>
 </div>
 </template>

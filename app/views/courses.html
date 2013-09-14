@@ -1,12 +1,12 @@
 <template name="courses">
 {{willRenderCourseLocation}}
 <h2>Courses</h2>
-<div class="well well-sm">
+{{>location_search}}
+{{>course_search}}
 <br />
-{{>search_form_horizontal}}
-</div>
 {{>sort}}
-<hr />
+<br />
+<br />
 {{#if styleIs "list"}}
 {{#each courses}}
 {{>course}}
