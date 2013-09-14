@@ -4,20 +4,18 @@
 }
 .image_carousel img {
   padding: 5px;
-  margin: 7px 2px 0px;
   display: block;
-  float: left;
+  margin: 7px auto 0px auto;
 }
 
 a.prev, a.next {
-  width: 45px;
   height: 50px;
   display: block;
   position: absolute;
   top: 55px;
 }
-a.prev { left: -22px; }
-a.next { right: -42px; }
+a.prev { left: 0px; }
+a.next { right: 0px; }
 a.prev.disabled, a.next.disabled {
   cursor: default;
 }

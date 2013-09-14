@@ -75,7 +75,7 @@
 #select-region {
   z-index: 10;
   display: none;
-  width: 40%;
+  width: 300px;
   position: absolute;
   top: 42px;
   right: 0;

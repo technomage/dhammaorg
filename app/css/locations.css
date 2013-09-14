@@ -1,3 +1,11 @@
+#location-search {
+  margin: 10px 0px 22px;
+}
+
+#location-search .row {
+  padding: 15px 0px;
+}
+
 .location-info {
   margin-bottom: 20px;
 }
@@ -12,13 +20,26 @@
   overflow: hidden;
 }
 
+#selected-location .location-image-container {
+  margin: -15px -15px 0px; 
+}
+
+#selected-location .panel-footer {
+  margin-top: -15px;
+}
+
 .location-image {
   position: relative;
   // top: -80px;
   width: 100%;
 }
 
+.location-body {
+  margin-left: 15px;
+}
+
 .meta {
+  font-size: 13px;
   display: block;
   text-align: center;
   clear: both;
@@ -29,12 +50,24 @@ td.location img {
   width: 60px;
 }
 
+.location-link.selected {
+  font-weight: bold;
+}
+
 .location-links {
+  margin-bottom: 20px;
   position: relative;
   left: -6px;
 }
 
-#locations-map-canvas {
-  height: 340px;
-  width: 100%;
+.location-body h3 {
+  margin-top: 10px;
+}
+
+#locations-carousel {
+  margin-bottom: 30px;
+}
+
+.small {
+  font-size: 11px;
 }

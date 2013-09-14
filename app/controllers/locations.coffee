@@ -1,21 +1,15 @@
 if Meteor.isClient
   Meteor.subscribe("locations")
   Meteor.subscribe("courses")
-  
-  # Template.locations.rendered = ->
-  #   mapOptions =
-  #     zoom:1 
-  #     mapTypeId: google.maps.MapTypeId.ROADMAP
-  #     
-  #   map = new google.maps.Map(document.getElementById("locations-map-canvas"), mapOptions)
-  #   map.setCenter new google.maps.LatLng 0,0
-  #   Locations.find().forEach (location) ->
-  #     marker = new google.maps.Marker
-  #       position: new google.maps.LatLng location.latitude, location.longitude
-  #       title: location.display_name
-  #       icon:'http://maps.google.com/mapfiles/ms/icons/blue-dot.png'
-  #     marker.setMap(map)
-  #   Session.set 'map', true
+
+  Template.locations.events = 
+    "click .location-link": (e) ->
+      e.preventDefault()
+      $( "a.location-link" ).removeClass("selected")
+      $( e.target ).parent("a").addClass("selected")
+      $(" #selected-location ").html( Template.location @ )
+      $(".location-image-container img").css "top", (i, old) ->
+        $(@).css "top", (Math.min( 0, (200 - $(@).height())/2 ) + "px")
   
   Template.locations.locations = ->
     Locations.find()
@@ -29,14 +23,7 @@ if Meteor.isClient
   Template.location.anyCourses = ->
     Courses.find({ location_id: @id }).count() > 0
 
-    
   Template.locations.rendered = ->
-    $(".location-image-container img").css "top", (i, old) ->
-      $(@).css "top", (Math.min( 0, (200 - $(@).height())/2 ) + "px")
-      
-    $(".location-info .dhamma-name a").click ->
-      scroll(0,0)
-      
     $("#locations-carousel").carouFredSel(
       auto: false
       circular: false
@@ -45,24 +32,16 @@ if Meteor.isClient
         filter: ".carousel-item"
       prev:
         button: "#locations-prev"
+        key: "left"
       next:
         button: "#locations-next"
+        key: "right"
+      onCreate: (data) ->
+        leftMargin = ( $("#locations").width() - 46 - data.width )/2
+        if leftMargin > 0 then $(@).parent().css( "margin-left", leftMargin )
     )
-    
-    # Parallax (very slow in firefox...)
-    # redraw = true
-    # setInterval (-> redraw = true), 33
-    # $(window).scroll ->
-    #   return unless redraw
-    #   redraw = false
-    #   scrollPosition = $(window).scrollTop()
-    #   $(".location-image-container img").css "top", (i, old) ->
-    #     offsetTop = $(@).parent().offset().top
-    #     h = $(@).height() 
-    #     m = h / 2
-    #     t = -(offsetTop - scrollPosition - windowHeight) / ( windowHeight + 200 )
-    #     if 0 < t < 1
-    #       console.log i, t
-    #       parseInt( -m + m * t ) + "px"
-    #     else
-    #       "-200px"
+
+  Template.location.rendered = ->
+    debugger
+    $("#dhamma-name").tooltip()
+

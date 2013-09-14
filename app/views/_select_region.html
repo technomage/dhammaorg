@@ -1,19 +1,450 @@
 <template name="select_region">
 <div id="select-region" class="panel panel-default">
   <div class="panel-body">
-    <h4>Select Region</h4>
-    <select style="width:100%" name="region">
-      <option>United States</option>
-    </select>
-    <hr />
     <h4>Select Language</h4>
     <select style="width:100%" name="region">
+      <option></option>
+      <option>Abkhazian</option>
+      <option>Afar</option>
+      <option>Afrikaans</option>
+      <option>Akan</option>
+      <option>Albanian</option>
+      <option>Amharic</option>
+      <option>Arabic</option>
+      <option>Aragonese</option>
+      <option>Armenian</option>
+      <option>Assamese</option>
+      <option>Avaric</option>
+      <option>Avestan</option>
+      <option>Aymara</option>
+      <option>Azeri</option>
+      <option>Bambara</option>
+      <option>Bashkir</option>
+      <option>Basque</option>
+      <option>Belarusian</option>
+      <option>Bengali</option>
+      <option>Bihari</option>
+      <option>Bislama</option>
+      <option>Bosnian</option>
+      <option>Breton</option>
+      <option>Bulgarian</option>
+      <option>Burmese</option>
+      <option>Catalan</option>
+      <option>Chamorro</option>
+      <option>Chechen</option>
+      <option>Chinese</option>
+      <option>Church Slavic</option>
+      <option>Chuvash</option>
+      <option>Cornish</option>
+      <option>Corsican</option>
+      <option>Cree</option>
+      <option>Croatian</option>
+      <option>Czech</option>
+      <option>Danish</option>
+      <option>Divehi</option>
+      <option>Dutch</option>
+      <option>Dzongkha</option>
       <option>English</option>
+      <option>Esperanto</option>
+      <option>Estonian</option>
+      <option>Ewe</option>
+      <option>Faroese</option>
+      <option>Fijian</option>
+      <option>Finnish</option>
+      <option>French</option>
+      <option>Fulah</option>
+      <option>Galician</option>
+      <option>Ganda</option>
+      <option>Georgian</option>
+      <option>German</option>
+      <option>Greek</option>
+      <option>Guarani</option>
+      <option>Gujarati</option>
+      <option>Haitian</option>
+      <option>Hausa</option>
+      <option>Hebrew</option>
+      <option>Herero</option>
+      <option>Hindi</option>
+      <option>Hiri Motu</option>
+      <option>Hungarian</option>
+      <option>Icelandic</option>
+      <option>Ido</option>
+      <option>Igbo</option>
+      <option>Indonesian</option>
+      <option>Interlingua</option>
+      <option>Interlingue</option>
+      <option>Inuktitut</option>
+      <option>Inupiaq</option>
+      <option>Irish</option>
+      <option>Italian</option>
+      <option>Japanese</option>
+      <option>Javanese</option>
+      <option>Kalaallisut</option>
+      <option>Kannada</option>
+      <option>Kanuri</option>
+      <option>Kashmiri</option>
+      <option>Kazakh</option>
+      <option>Khmer</option>
+      <option>Kikuyu</option>
+      <option>Kinyarwanda</option>
+      <option>Kirghiz</option>
+      <option>Komi</option>
+      <option>Kongo</option>
+      <option>Korean</option>
+      <option>Kuanyama</option>
+      <option>Kurdish</option>
+      <option>Lao</option>
+      <option>Latin</option>
+      <option>Latvian</option>
+      <option>Limburgish</option>
+      <option>Lingala</option>
+      <option>Lithuanian</option>
+      <option>Luba-Katanga</option>
+      <option>Luxembourgish</option>
+      <option>Macedonian</option>
+      <option>Malagasy</option>
+      <option>Malay</option>
+      <option>Malayalam</option>
+      <option>Maltese</option>
+      <option>Manx</option>
+      <option>Maori</option>
+      <option>Marathi</option>
+      <option>Marshallese</option>
+      <option>Mongolian</option>
+      <option>Nauru</option>
+      <option>Navajo</option>
+      <option>Ndonga</option>
+      <option>Nepali</option>
+      <option>North Ndebele</option>
+      <option>Northern Sami</option>
+      <option>Norwegian</option>
+      <option>Norwegian Bokmål</option>
+      <option>Norwegian Nynorsk</option>
+      <option>Nyanja</option>
+      <option>Occitan</option>
+      <option>Ojibwa</option>
+      <option>Oriya</option>
+      <option>Oromo</option>
+      <option>Ossetic</option>
+      <option>Pali</option>
+      <option>Persian</option>
+      <option>Polish</option>
+      <option>Portuguese</option>
+      <option>Punjabi</option>
+      <option>Pushto</option>
+      <option>Quechua</option>
+      <option>Romanian</option>
+      <option>Romansh</option>
+      <option>Rundi</option>
+      <option>Russian</option>
+      <option>Samoan</option>
+      <option>Sango</option>
+      <option>Sanskrit</option>
+      <option>Sardinian</option>
+      <option>Scottish Gaelic</option>
+      <option>Serbian</option>
+      <option>Shona</option>
+      <option>Sichuan Yi</option>
+      <option>Sindhi</option>
+      <option>Sinhala</option>
+      <option>Slovak</option>
+      <option>Slovenian</option>
+      <option>Somali</option>
+      <option>Sorbian</option>
+      <option>South Ndebele</option>
+      <option>Southern Sotho</option>
+      <option>Spanish</option>
+      <option>Sundanese</option>
+      <option>Swahili</option>
+      <option>Swati</option>
+      <option>Swedish</option>
+      <option>Tagalog</option>
+      <option>Tahitian</option>
+      <option>Tajik</option>
+      <option>Tamil</option>
+      <option>Tatar</option>
+      <option>Telugu</option>
+      <option>Thai</option>
+      <option>Tibetan</option>
+      <option>Tigrinya</option>
+      <option>Tonga</option>
+      <option>Tsonga</option>
+      <option>Tswana</option>
+      <option>Turkish</option>
+      <option>Turkmen</option>
+      <option>Twi</option>
+      <option>Ukrainian</option>
+      <option>Urdu</option>
+      <option>Uyghur</option>
+      <option>Uzbek</option>
+      <option>Venda</option>
+      <option>Vietnamese</option>
+      <option>Volapük</option>
+      <option>Walloon</option>
+      <option>Welsh</option>
+      <option>Western Frisian</option>
+      <option>Wolof</option>
+      <option>Xhosa</option>
+      <option>Yiddish</option>
+      <option>Yoruba</option>
+      <option>Zhuang</option>
+      <option>Zulu</option>
     </select>
     <hr />
-    <button type="button" class="btn btn-primary btn-sm">Save Preferences</button>
-    <button type="button" class="btn btn-default btn-sm float-right"
-      data-dismiss="modal">Cancel</button>
+    <h4>Select Locale</h4>
+    <select style="width:100%" name="region">
+      <option></option>
+      <option>Afghanistan</option>
+      <option>Aland</option>
+      <option>Albania</option>
+      <option>Algeria</option>
+      <option>American Samoa</option>
+      <option>Andorra</option>
+      <option>Angola</option>
+      <option>Anguilla</option>
+      <option>Antarctica</option>
+      <option>Antigua And Barbuda</option>
+      <option>Argentina</option>
+      <option>Armenia</option>
+      <option>Aruba</option>
+      <option>Australia</option>
+      <option>Austria</option>
+      <option>Azerbaijan</option>
+      <option>Bahamas</option>
+      <option>Bahrain</option>
+      <option>Bangladesh</option>
+      <option>Barbados</option>
+      <option>Belarus</option>
+      <option>Belgium</option>
+      <option>Belize</option>
+      <option>Benin</option>
+      <option>Bermuda</option>
+      <option>Bhutan</option>
+      <option>Bolivia</option>
+      <option>Bonaire</option>
+      <option>Bosnia And Herzegovina</option>
+      <option>Botswana</option>
+      <option>Bouvet Island</option>
+      <option>Brazil</option>
+      <option>British Indian Ocean Territory</option>
+      <option>Brunei Darussalam</option>
+      <option>Bulgaria</option>
+      <option>Burkina Faso</option>
+      <option>Burundi</option>
+      <option>Cambodia</option>
+      <option>Cameroon</option>
+      <option>Canada</option>
+      <option>Cape Verdi</option>
+      <option>Cayman Islands</option>
+      <option>Central African Republic</option>
+      <option>Chad</option>
+      <option>Chile</option>
+      <option>China</option>
+      <option>Christmas Island</option>
+      <option>Cocos (Keeling) Islands</option>
+      <option>Colombia</option>
+      <option>Comoros</option>
+      <option>Cook Islands</option>
+      <option>Costa Rica</option>
+      <option>Croatia</option>
+      <option>Cuba</option>
+      <option>Curaçao</option>
+      <option>Cyprus</option>
+      <option>Czech Republic</option>
+      <option>Côte d'Ivoire</option>
+      <option>Democratic Republic of the Congo</option>
+      <option>Denmark</option>
+      <option>Djibouti</option>
+      <option>Dominica</option>
+      <option>Dominican Republic</option>
+      <option>Ecuador</option>
+      <option>Egypt</option>
+      <option>El Salvador</option>
+      <option>Equatorial Guinea</option>
+      <option>Eritrea</option>
+      <option>Estonia</option>
+      <option>Ethiopia</option>
+      <option>Falkland Islands</option>
+      <option>Faroe Islands</option>
+      <option>Federated States of Micronesia</option>
+      <option>Fiji</option>
+      <option>Finland</option>
+      <option>France</option>
+      <option>French Guiana</option>
+      <option>French Polynesia</option>
+      <option>French Southern Territories</option>
+      <option>Gabon</option>
+      <option>Gambia</option>
+      <option>Georgia</option>
+      <option>Germany</option>
+      <option>Ghana</option>
+      <option>Gibraltar</option>
+      <option>Greece</option>
+      <option>Greenland</option>
+      <option>Grenada</option>
+      <option>Guadaloupe</option>
+      <option>Guam</option>
+      <option>Guatemala</option>
+      <option>Guernsey</option>
+      <option>Guinea</option>
+      <option>Guinea-Bissau</option>
+      <option>Guyana</option>
+      <option>Haiti</option>
+      <option>Heard and McDonald Islands</option>
+      <option>Honduras</option>
+      <option>Hong Kong</option>
+      <option>Hungary</option>
+      <option>Iceland</option>
+      <option>India</option>
+      <option>Indonesia</option>
+      <option>Iran</option>
+      <option>Iraq</option>
+      <option>Ireland</option>
+      <option>Isle Of Man</option>
+      <option>Israel</option>
+      <option>Italy</option>
+      <option>Jamaica</option>
+      <option>Japan</option>
+      <option>Jersey</option>
+      <option>Jordan</option>
+      <option>Kazakhstan</option>
+      <option>Kenya</option>
+      <option>Kiribati</option>
+      <option>Kuwait</option>
+      <option>Kyrgyzstan</option>
+      <option>Laos</option>
+      <option>Latvia</option>
+      <option>Lebanon</option>
+      <option>Lesotho</option>
+      <option>Liberia</option>
+      <option>Libya</option>
+      <option>Liechtenstein</option>
+      <option>Lithuania</option>
+      <option>Luxembourg</option>
+      <option>Macau</option>
+      <option>Macedonia</option>
+      <option>Madagascar</option>
+      <option>Malawi</option>
+      <option>Malaysia</option>
+      <option>Maldives</option>
+      <option>Mali</option>
+      <option>Malta</option>
+      <option>Marshall Islands</option>
+      <option>Martinique</option>
+      <option>Mauritania</option>
+      <option>Mauritius</option>
+      <option>Mayotte</option>
+      <option>Mexico</option>
+      <option>Moldova</option>
+      <option>Monaco</option>
+      <option>Mongolia</option>
+      <option>Montenegro</option>
+      <option>Montserrat</option>
+      <option>Morocco</option>
+      <option>Mozambique</option>
+      <option>Myanmar</option>
+      <option>Namibia</option>
+      <option>Nauru</option>
+      <option>Nepal</option>
+      <option>Netherlands</option>
+      <option>New Caledonia</option>
+      <option>New Zealand</option>
+      <option>Nicaragua</option>
+      <option>Niger</option>
+      <option>Nigeria</option>
+      <option>Niue</option>
+      <option>Norfolk Island</option>
+      <option>North Korea</option>
+      <option>Northern Mariana Islands</option>
+      <option>Norway</option>
+      <option>Oman</option>
+      <option>Pakistan</option>
+      <option>Palau</option>
+      <option>Palestine</option>
+      <option>Panama</option>
+      <option>Papua New Guinea</option>
+      <option>Paraguay</option>
+      <option>Peru</option>
+      <option>Philippines</option>
+      <option>Pitcairn</option>
+      <option>Poland</option>
+      <option>Portugal</option>
+      <option>Puerto Rico</option>
+      <option>Qatar</option>
+      <option>Republic of Congo</option>
+      <option>Reunion</option>
+      <option>Romania</option>
+      <option>Russia</option>
+      <option>Rwanda</option>
+      <option>Saint Barthélemy</option>
+      <option>Saint Helena</option>
+      <option>Saint Kitts-Nevis</option>
+      <option>Saint Lucia</option>
+      <option>Saint Martin</option>
+      <option>Saint Pierre And Miquelon</option>
+      <option>Saint Vincent And The Grenadines</option>
+      <option>Samoa</option>
+      <option>San Marine</option>
+      <option>Sao Tome And Principe</option>
+      <option>Saudi Arabia</option>
+      <option>Senegal</option>
+      <option>Serbia</option>
+      <option>Seychelles</option>
+      <option>Sierra Leone</option>
+      <option>Singapore</option>
+      <option>Sint Maarten</option>
+      <option>Slovania</option>
+      <option>Slovokia</option>
+      <option>Solomon Islands</option>
+      <option>Somalia</option>
+      <option>South Africa</option>
+      <option>South Georgia And The South Sandwich Islands</option>
+      <option>South Korea</option>
+      <option>South Sudan</option>
+      <option>Spain</option>
+      <option>Sri Lanka</option>
+      <option>Sudan</option>
+      <option>Suriname</option>
+      <option>Svalbard And Jan Mayen</option>
+      <option>Swaziland</option>
+      <option>Sweden</option>
+      <option>Switzerland</option>
+      <option>Syria</option>
+      <option>Taiwan</option>
+      <option>Tajikistan</option>
+      <option>Tanzania</option>
+      <option>Thailand</option>
+      <option>Timor-Leste</option>
+      <option>Togo</option>
+      <option>Tokelau</option>
+      <option>Tonga</option>
+      <option>Trinidad And Tobago</option>
+      <option>Tunisia</option>
+      <option>Turkey</option>
+      <option>Turkmenistan</option>
+      <option>Turks And Caicos Islands</option>
+      <option>Tuvalu</option>
+      <option>Uganda</option>
+      <option>Ukraine</option>
+      <option>United Arab Emirates</option>
+      <option>United Kingdom</option>
+      <option>United States</option>
+      <option>United States Minor Outlying Islands</option>
+      <option>Uruguay</option>
+      <option>Uzbekistan</option>
+      <option>Vanuatu</option>
+      <option>Vatican City</option>
+      <option>Venezuela</option>
+      <option>Vietnam</option>
+      <option>Virgin Islands, British</option>
+      <option>Virgin Islands, U.S.</option>
+      <option>Wallis And Futuna</option>
+      <option>Western Sahara</option>
+      <option>Yemen</option>
+      <option>Zambia</option>
+      <option>Zimbabwe</option>
+    </select>
+    </div>
+    <br />
   </div>
-</div>
 </template>

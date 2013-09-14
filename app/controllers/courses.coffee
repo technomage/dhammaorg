@@ -3,6 +3,7 @@ if Meteor.isClient
     Courses.find { canceled_flag: false }, { sort: { course_start_date: 1 } }
     
   Template.course_row.rendered = Template.course.rendered = ->
+    console.log @
     $("a.info").tooltip()
     
   Template.course_row.location = Template.course.location = ->

@@ -15,12 +15,13 @@ h1 {
 
 h2 {
   font-size: 22px;
-  padding: 20px 0px;
-  margin: 35px -22px 35px -22px;
+  margin: 35px -22px 49px -22px;
   border-width: 2px 0px 2px 0px;
   padding: 18px 22px;
   border-style: solid;
   border-width: 2px 0px 2px 0px;
+  border-color: #EFC72A;
+  background-color: #FFF7C9;
 }
 
 h3 {
@@ -32,6 +33,10 @@ h4 {
 }
 
 a {
+  color: #029;
+}
+
+a:hover {
   color: #029;
 }
 
@@ -142,6 +147,7 @@ header .align-left { left: -20px }
 
 figure img {
   width: 100%;
+  margin-bottom: 25px;
 }
 
 figure.figure-small {
