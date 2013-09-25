@@ -56,8 +56,11 @@ if Meteor.isClient
     "active" if window.location.pathname == "/"
   
   Handlebars.registerHelper "activeIf", (name, value) ->
-    "active" if Session.get name == value
-
+    console.log name, value
+    value = true if value == "true"
+    value = false if value == "false"
+    return "active" if Session.get name == value
+    
   Handlebars.registerHelper "hasTitle", ->
     Session.get("title")? and Session.get("title") != ""
     

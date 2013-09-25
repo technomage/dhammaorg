@@ -5,7 +5,7 @@ if Meteor.isClient
   Template.navbar.rendered = ->
     $("#nav-region a, #nav-home a").tooltip()
     $("#navbar > li > a").not("#nav-region a").hover -> $("#select-region").hide()
-    $("#nav-region").hover ->
+    $("#nav-region a").hover ->
       $("#select-region").show()
       $("body").click (e) -> 
         target = $(e.target)

@@ -1,5 +1,6 @@
 #location-search {
-  margin: 10px 0px 22px;
+  margin: 0px 0px 22px;
+  width: 100%;
 }
 
 #location-search .row {
@@ -57,6 +58,10 @@ td.location img {
 .location-links {
   position: relative;
   left: -10px;
+}
+
+.location-links a {
+  color: #029;
 }
 
 .center {

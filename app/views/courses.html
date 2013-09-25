@@ -1,10 +1,9 @@
 <template name="courses">
 {{willRenderCourseLocation}}
 <h2>Courses</h2>
-{{>location_search}}
 {{>course_search}}
-<br />
 {{>sort}}
+<br />
 <br />
 <br />
 {{#if styleIs "list"}}
@@ -19,7 +18,7 @@
   {{#each courses}}
     {{>course_row}}
   {{/each}}
-</table>
+  </table>
 {{/if}}
 {{#if styleIs "map"}}
 <iframe height=600 width="100%" src="http://courses.dhamma.org/en/maps/001"></iframe>
@@ -50,7 +49,7 @@
       {{/with}}
     </div>
   </div>
-  <div class="col-sm-3">
+  <div class="col-sm-4">
     <div class="course-info">
       <h3>
         <a class="info" data-placement="bottom" data-toggle="tooltip" href="#" data-html="true"
@@ -64,16 +63,18 @@
       {{/with}}
     </div>
   </div>
-  <div class="col-sm-5">
-    <h3> </h3>
-    <h4>
+  <div id="course-status" class="col-sm-1">
+    {{>course_status}}
+  </div>
+  <div style="text-align:right;" class="col-sm-3">
+    <h3>
       <span class="date">{{formatDate course_start_date}}</span> 
       {{#if course_end_date}}
       - 
       <span class="date">{{formatDate course_end_date}}</span>
       {{/if}}
-    </h4>
-    <a class="btn btn-default">Apply</a>
+    </h3>
+    <a class="btn btn-apply">Apply</a>
     {{#if comments_html}}
     <p class="comments">
       <br />
@@ -86,7 +87,7 @@
 
 <template name="course_row">
 <tr class="course-row"> 
-  <td><a class="btn btn-primary">Apply</a></td> 
+  <td><a class="btn btn-apply">Apply</a></td> 
   <td class="course-type">
     <a class="info" data-placement="bottom"
       data-toggle="tooltip" href="#" data-html="true"
@@ -120,7 +121,7 @@
 
 <template name="course_status">
 {{#if status}}
-<span class="status status-{{status}}">{{courseStatusName course_status}}</span>
+<span class="status status-{{statusClass}}">{{status}}</span>
 {{else}}
   {{#key_value statuses}}
   <div class="status">

@@ -1,24 +1,45 @@
 <template name="course_search">
-<div id="search-dates" class="form-group row">
-  <div class="col-xs-4">
-    <input name="starts" class="form-control date" placeholder="Start Date"></input>
-  </div>
-  <div class="col-xs-4">
-    <input name="ends" class="form-control date" placeholder="End Date"></input>
-  </div>
-  <div class="col-xs-4">
-    <input name="language" class="form-control" placeholder="Language"></input>
+<ul id="student-type-select" class="nav nav-tabs">
+  <li class="{{newStudentClass}}">
+    <a href="#" class="new-student ">New Student</a></li>
+  <li class="{{oldStudentClass}}">
+    <a href="#" class="old-student ">Old Student</a></li>
+  <li>
+    <a href="#" class="child">Child/Teen</a></li>
+</ul>
+<div id="course-search-panel" class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-4">
+        <input name="search" class="form-control" placeholder="State, Country or Region"></input>
+      </div>
+      <div class="col-sm-4">
+        <input name="starts" class="form-control date" placeholder="Select Date"></input>
+      </div>
+      <div class="col-sm-4">
+        <select id="language-filter" class="form-control" data-placeholder="Language">
+          <option value="">Language</option>
+          {{>language_options}}
+        </select>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-sm-8">
+        {{#if oldStudent}}
+          <div class="form-group">
+            <select class="form-control" multiple id="course-type">
+              {{#each attendeeCourseTypes attendeeType}}
+              <option val="{{this}}">{{courseTypeName this}}</option>
+              {{/each}}
+            </select>
+          </div>
+        {{/if}}
+      </div>
+      <div class="col-sm-4">
+        <a href="/courses" class="btn btn-apply" style="width:100%;"><i class="glyphicon glyphicon-search"></i> Search</a>
+      </div>
+    </div>
   </div>
 </div>
-<div class="checkbox"><label><input name="oldStudent" type="checkbox" /> I am an old student</label></div>
-{{#if oldStudent}}
-<div class="checkbox"><label><input name="wishToServe" type="checkbox" /> I wish to serve a course</label></div>
-<div class="form-group">
-  <select class="form-control" multiple id="course-type" class="">
-    {{#each attendeeCourseTypes attendeeType}}
-    <option val="{{this}}">{{courseTypeName this}}</option>
-    {{/each}}
-  </select>
-</div>
-{{/if}}
 </template>

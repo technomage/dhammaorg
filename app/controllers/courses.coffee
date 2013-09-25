@@ -1,9 +1,16 @@
 if Meteor.isClient 
+  Template.course_search.oldStudentClass = ->
+    if Session.get "oldStudent"
+      return "active" 
+    
+  Template.course_search.newStudentClass = ->
+    unless Session.get "oldStudent"
+      return "active" 
+  
   Template.courses.courses = ->
     Courses.find { canceled_flag: false }, { sort: { course_start_date: 1 } }
     
-  Template.courses.rendered = ->
-    @find("input[name=oldStudent]").prop "checked", Session.get("oldStudent")
+    #Template.courses.rendered = ->
 
   Template.course_row.rendered = Template.course.rendered = ->
     $("a.info").tooltip()

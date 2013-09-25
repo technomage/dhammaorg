@@ -18,7 +18,9 @@
       {{#if hasTitle}}
         <h2>{{ title }}</h2>
       {{/if}}
-      {{yield}}
+      <section id="main-content">
+        {{yield}}
+      </section>
     </section>
   </div>
 </div>

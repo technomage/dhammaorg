@@ -3,9 +3,10 @@
   <span class="input-group-addon">
     <i class="glyphicon glyphicon-globe"></i> World
   </span>
-  <input class="form-control" type="text" id="near-by-airport" placeholder="Search by region" />
-  <span class="input-group-btn">
-    <a href="/courses" class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i> Search</a>
-  </span>
+  <select multiple class="form-control" id="region-search" data-placeholder="Search by region">
+    {{#each regions}}
+      <option>{{name}}</option>
+    {{/each}}
+  </select>
 </div>
 </template>

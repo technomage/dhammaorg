@@ -26,6 +26,7 @@
 #navbar {
   position: relative;
   margin: 20px auto 0;
+  width: 94%;
 }
 
 #navbar li {
@@ -50,6 +51,7 @@
 
 #navbar > li > a {
   font-size: 16px;
+  z-index: 30;
 }
 
 #navbar > li.dropdown > .dropdown-menu {
@@ -76,15 +78,21 @@
 #select-region {
   z-index: 20;
   display: none;
-  width: 300px;
+  width: 190px;
   position: absolute;
-  right: 0;
+  top: -8px;
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
+  text-align: center;
+}
+
+#select-region .panel-body {
+  margin-top: 27px;
+  padding-bottom: 0px;
 }
 
 .navbar .nav,
