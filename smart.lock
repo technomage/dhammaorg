@@ -9,7 +9,8 @@
       "router": {},
       "select2": {},
       "npm": {},
-      "carouFredSel": {}
+      "carouFredSel": {},
+      "bootstrap-daterangepicker": {}
     },
     "packages": {
       "HTML5-History-API": {
@@ -39,8 +40,8 @@
       },
       "select2": {
         "git": "https://github.com/nate-strauser/meteor-select2.git",
-        "tag": "v3.4.0",
-        "commit": "a731bdb357cadd840aa5d9a3e893ab3df097a09c"
+        "tag": "v3.4.3",
+        "commit": "fbe1f33800c90ecdfdcec529970382f8781e3988"
       },
       "npm": {
         "git": "https://github.com/arunoda/meteor-npm.git",
@@ -51,6 +52,11 @@
         "git": "https://github.com/mangasocial/meteor-carouFredSel.git",
         "tag": "v0.1.1",
         "commit": "058f3031c7fbaba3ffefabb167e67e3b10b63b4f"
+      },
+      "bootstrap-daterangepicker": {
+        "git": "https://github.com/BenjaminRH/meteor-bootstrap-daterangepicker.git",
+        "tag": "v0.1.0",
+        "commit": "883bcafd96aae0072fdbe596243030afdadbe3c3"
       },
       "page-js-ie-support": {
         "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",

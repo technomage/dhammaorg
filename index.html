@@ -15,12 +15,7 @@
       {{>navbar}}
     </section>
     <section id="main">
-      {{#if hasTitle}}
-        <h2>{{ title }}</h2>
-      {{/if}}
-      <section id="main-content">
-        {{yield}}
-      </section>
+      {{yield}}
     </section>
   </div>
 </div>

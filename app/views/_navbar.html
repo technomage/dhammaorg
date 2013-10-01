@@ -1,5 +1,5 @@
 <template name="navbar">
-<ul id="navbar" class="nav nav-pills">
+<ul id="navbar" class="nav nav-pills nav-justified">
   <li id="nav-home" class="{{activeIfHome}} "><a href="/" title="Home"><i
         class="glyphicon glyphicon-home"></i></a></li>
 <li id="nav-about" class="{{activeIfCurrentPage 'about'}} dropdown">
@@ -39,7 +39,7 @@
     </ul>
   </li>
   <li id="nav-resources" class="{{activeIfCurrentPage 'resources'}} dropdown" href="/resources">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="/">
       Resources
     </a>
     <ul class="dropdown-menu" id="resources-menu">
@@ -49,7 +49,7 @@
     </ul>
   </li>
   <li id="nav-special-sites" class="{{activeIfCurrentPage 'special_sites'}} dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="/">
       Special Sites
     </a>
     <ul class="dropdown-menu" id="special-sites-menu">

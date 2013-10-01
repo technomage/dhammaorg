@@ -5,15 +5,16 @@ class Migration
   constructor: ->
     @pg = Meteor.require 'pg'
     @fiber = Meteor.require 'fibers'
-    @clear()
-    @insertFixtures()
-    
+    #@clear()
+    #@insertFixtures()
+    #@generateMigrationFile()
+   
   migrations: [
     target: Locations
-    queries: ["select locations.*, countries.name as country from locations left join countries on countries.id = locations.country_id where locations.enabled=true and location_type_id=6 and sub_domain not in (#{exclude})"]
+    queries: ["select locations.id, locations.location_name, locations.location_type_id, locations.region_id, locations.description, locations.city, locations.province, locations.url, locations.admin_contact_name, locations.admin_email, locations.admin_phone, locations.latitude, locations.longitude, locations.header_image_path, locations.principle_language_id, locations.main_teacher_name, locations.main_teacher_email, locations.dhamma_name, locations.sub_domain, locations.header_image_file_name, locations.country_id, locations.display_name, locations.dhamma_name_meaning, locations.enabled, locations.status, locations.state_province_id, countries.name as country from locations left join countries on countries.id = locations.country_id where locations.enabled=true and location_type_id=6 and sub_domain not in (#{exclude})"]
   ,
     target: Courses
-    queries: ["select courses.*, 
+    queries: ["select courses.id, courses.course_start_date, courses.course_end_date, courses.enrollment_open_date, courses.old_male_status_id, courses.new_male_status_id, courses.old_female_status_id, courses.new_female_status_id, courses.female_server_status_id, courses.male_server_status_id,
       course_type_languages.footnote_html as course_type_description,
       course_type_languages.course_type_description as course_type, 
       locations.id as location_id,
@@ -42,18 +43,54 @@ class Migration
   clear: -> 
     Locations.remove {}
     Courses.remove {}
-    
-  insertFixtures: ->
+
+  withEachRow: (callback) ->
     @pg.connect "postgres://localhost/osa", (err, client) =>
       _.each @migrations, ( migration ) =>
         for query in migration.queries
           client.query query, (err, result) =>
             for row in result.rows
-              if migration.target._name == "regions"
-                console.log "Regions.insert( ", row ," ) "
-              @fiber((r) -> 
-                r.target.insert r.row
-              ).run( target: migration.target, row: row )
+              callback row, migration
+
+    
+  insertFixtures: ->
+    @withEachRow (row, migration) ->
+      if migration.target._name == "regions"
+        console.log "Regions.insert( ", row ," ) "
+      @fiber((r) -> 
+        r.target.insert r.row
+      ).run( target: migration.target, row: row )
+      
+  generateMigrationFile: ->
+    dateFields = ["created_at", "updated_at", "last_publish_date_time", "course_start_date", "course_end_date", "course_start_date", "enrollment_open_date"]
+    numericFields = ["id", "parent_id", "location_id", "old_male_status_id", "new_male_status_id", "old_female_status_id", "new_female_status_id", "female_server_status_id", "male_server_status_id", "loc_course_type_app_id"]
+    @withEachRow (row, migration) =>
+      console.log @upCase( migration.target._name ) + ".insert("
+      _.each row, (v, k) -> 
+        out = "  "
+        out += k + ": "
+        if dateFields.indexOf(k) >= 0
+          out += "new Date(\"#{v}\")"
+        else if !k?
+          out += "null"
+        else if numericFields.indexOf(k) >= 0
+          out += v
+        else if k == "course_type_description" && v?
+          v = replaceAll("\n","",v)
+          v = replaceAll("\"","\\\"",v)
+          out += "\"#{v}\""
+        else
+          out += "\"#{v}\""
+        out += ","
+        console.log out
+      console.log ")"
+  
+  replaceAll = (find, replace, str) ->
+    str.replace(new RegExp(find, 'g'), replace)
+      
+  upCase: (name) ->
+    name[0].toUpperCase() + name[1..-1]
           
-              # if Meteor.isServer
-              #   Meteor.startup -> new Migration()
+  if Meteor.isServer
+    Meteor.startup -> 
+      new Migration()

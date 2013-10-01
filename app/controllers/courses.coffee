@@ -1,19 +1,9 @@
 if Meteor.isClient 
-  Template.course_search.oldStudentClass = ->
-    if Session.get "oldStudent"
-      return "active" 
-    
-  Template.course_search.newStudentClass = ->
-    unless Session.get "oldStudent"
-      return "active" 
-  
   Template.courses.courses = ->
-    Courses.find { canceled_flag: false }, { sort: { course_start_date: 1 } }
-    
-    #Template.courses.rendered = ->
+    Courses.find {}, { sort: { course_start_date: 1 } }
 
   Template.course_row.rendered = Template.course.rendered = ->
-    $("a.info").tooltip()
+    $("a.info").tooltip(placement: "auto")
     
   Template.course_row.location = Template.course.location = ->
     Locations.findOne id: @location_id

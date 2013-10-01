@@ -1,45 +1,60 @@
 <template name="course_search">
-<ul id="student-type-select" class="nav nav-tabs">
-  <li class="{{newStudentClass}}">
-    <a href="#" class="new-student ">New Student</a></li>
-  <li class="{{oldStudentClass}}">
-    <a href="#" class="old-student ">Old Student</a></li>
-  <li>
-    <a href="#" class="child">Child/Teen</a></li>
+<ul id="student-type-select" class="nav nav-tabs nav-justified">
+  <li class="{{activeIfAttendeeType 'new'}}">
+    <a data-attendee-type="new" href="#" class="new-student ">For New Students</a></li>
+  <li class="{{activeIfAttendeeType 'old'}}">
+    <a data-attendee-type="old" href="#" class="old-student ">For Old Students</a></li>
+  <li class="{{activeIfAttendeeType 'child'}}">
+    <a data-attendee-type="child" href="#" class="child">For Children/Teens</a></li>
+  <li class="{{activeIfAttendeeType 'executive'}}">
+    <a data-attendee-type="executive" href="#" class="executive">For Executives</a></li>
 </ul>
-<div id="course-search-panel" class="panel panel-default">
-  <div class="panel-body">
+<div id="course-search-panel">
+  <div class="row">
+  <div class="col-sm-10">
     <div class="row">
       <div class="col-sm-4">
-        <input name="search" class="form-control" placeholder="State, Country or Region"></input>
+        <input name="search" class="form-control" placeholder="State/Province, Country, Region"></input>
       </div>
       <div class="col-sm-4">
-        <input name="starts" class="form-control date" placeholder="Select Date"></input>
+        <input name="starts" class="form-control date" placeholder="Select Date Range"></input>
       </div>
       <div class="col-sm-4">
-        <select id="language-filter" class="form-control" data-placeholder="Language">
-          <option value="">Language</option>
+        <select multiple id="language-filter" class="form-control" data-placeholder="Select Course Language">
           {{>language_options}}
         </select>
       </div>
     </div>
     <br />
+    {{#if showAdvancedOptions}}
     <div class="row">
-      <div class="col-sm-8">
-        {{#if oldStudent}}
-          <div class="form-group">
-            <select class="form-control" multiple id="course-type">
-              {{#each attendeeCourseTypes attendeeType}}
-              <option val="{{this}}">{{courseTypeName this}}</option>
-              {{/each}}
-            </select>
-          </div>
+      <div class="col-sm-4">
+        <div class="form-group">
+          <select class="form-control" multiple id="course-type">
+            {{#each attendeeCourseTypes attendeeType}}
+            <option val="{{this}}">{{courseTypeName this}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        {{#if isAttendeeType 'old'}}
+        <div class="form-group">
+          <select class="form-control" multiple id="attendee-type">
+            <option val="attend">Attend</option>
+            <option val="serve">Serve</option>
+          </select>
+        </div>
         {{/if}}
       </div>
       <div class="col-sm-4">
-        <a href="/courses" class="btn btn-apply" style="width:100%;"><i class="glyphicon glyphicon-search"></i> Search</a>
       </div>
     </div>
+    {{/if}}
   </div>
+  <div class="col-sm-2">
+    <a href="/courses" class="btn btn-apply center" style="width:100%;"><i class="glyphicon glyphicon-search"></i></a>
+  </div>
+</div>
 </div>
 </template>

@@ -29,18 +29,17 @@ h1 {
 
 h2 {
   font-size: 22px;
-  margin: 35px -44px 49px -44px;
-  border-width: 2px 0px 2px 0px;
+  margin: 17px -44px 49px -44px;
+  border-width: 3px 0px 3px 0px;
   padding: 18px 44px;
   border-style: solid;
-  border-width: 2px 0px 2px 0px;
+  border-width: 3px 0px 3px 0px;
   border-color: #EFC72A;
   background-color: #FFF7C9;
 }
 
 h3 {
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 h4 {
@@ -52,7 +51,7 @@ hr {
   border-color: #ddd;
 }
 
-a {
+a, .btn-link {
   color: #029;
 }
 
@@ -73,7 +72,7 @@ body {
 }
 
 #main {
-  padding: 0px 22px;
+  padding: 0px 7%;
 }
 
 #main ul, #main ol {
@@ -128,40 +127,6 @@ header .align-left { left: -20px }
   padding: 10px 15px;
 }
 
-.results-table {
-  font-size: 13px;
-}
-
-.results-table thead {
-  font-size: 12px;
-}
-
-.comments, .hint {
-  color: #666;
-  font-style: italic;
-}
-
-.status {
-  font-weight: bold;
-  white-space: nowrap;
-}
-
-.date {
-  white-space: nowrap;
-}
-
-.status-open {
-  color: green;
-}
-
-.status-waitlist {
-  color: orange;
-}
-
-.status-closed, .status-long_waitlist {
-  color: red;
-}
-
 figure img {
   width: 100%;
   margin-bottom: 25px;
@@ -199,6 +164,10 @@ figcaption {
   width: 0;
 }
 
+article.panel, article.panel .panel-heading, article.panel .panel-footer, #location-panel, #location-panel .panel-footer {
+  border-color: #EFC72A;
+}
+
 article.panel .panel-heading {
   padding: 15px 25px 20px;
 }
@@ -209,4 +178,19 @@ article.panel .panel-body {
 
 blockquote {
   color: #029;
+}
+
+.yellow-grad, .panel-heading, .panel-footer {
+  background: #ffffea; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffea 51%, #fffff4 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(51%,#ffffea), color-stop(100%,#fffff4)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffea 51%,#fffff4 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffea 51%,#fffff4 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffea 51%,#fffff4 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffea 51%,#fffff4 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffea', endColorstr='#fffff4',GradientType=0 ); /* IE6-9 */
+}
+
+.select2-container-multi .select2-choices .select2-search-field input {
+  font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }

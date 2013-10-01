@@ -57,11 +57,12 @@ td.location img {
 
 .location-links {
   position: relative;
-  left: -10px;
+  left: -13px;
 }
 
 .location-links a {
   color: #029;
+  text-decoration: underline;
 }
 
 .center {

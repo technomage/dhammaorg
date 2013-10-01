@@ -1,10 +1,9 @@
 <template name="courses">
 {{willRenderCourseLocation}}
-<h2>Courses</h2>
+<h2 style="margin-bottom: 0px;">Courses</h2>
+<div id="course-search">
 {{>course_search}}
 {{>sort}}
-<br />
-<br />
 <br />
 {{#if styleIs "list"}}
 {{#each courses}}
@@ -13,7 +12,7 @@
 {{/each}}
 {{/if}}
 {{#if styleIs "table"}}
-  <table class="results-table table table-condensed">
+  <table class="results-table table table-hover">
   {{>course_header}}
   {{#each courses}}
     {{>course_row}}
@@ -21,20 +20,21 @@
   </table>
 {{/if}}
 {{#if styleIs "map"}}
-<iframe height=600 width="100%" src="http://courses.dhamma.org/en/maps/001"></iframe>
+<iframe frameborder=0 height=600 width="100%" src="http://courses.dhamma.org/en/maps/001"></iframe>
 {{/if}}
 </template>
 
 <template name="course_header">
 <thead>
   <tr>
-    <td></td>
-    <td><i class="glyphicon glyphicon-sort"></i> Type</td>
-    <td>Dates</td>
+    <td>Attend/Serve</td>
+    <td>Dates<img src="/images/sort.gif" /></td>
+    <td>Type<img src="/images/sort.gif" /></td>
+    <td>Status<img src="/images/sort.gif" /></td>
     {{#if renderCourseLocation}}
-    <td>Location</td>
+    <td>Location<img src="/images/sort.gif" /></td>
+    <td>Distance<img src="/images/sort.gif" /></td>
     {{/if}}
-    <td>Status</td>
     <td>Comments</td>
   </tr>
 </thead>
@@ -42,37 +42,10 @@
 
 <template name="course">
 <div class="course row">
-  <div class="col-sm-4">
-    <div class="location-image-container">
-      {{#with location}}
-      <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
-      {{/with}}
-    </div>
-  </div>
-  <div class="col-sm-4">
-    <div class="course-info">
-      <h3>
-        <a class="info" data-placement="bottom" data-toggle="tooltip" href="#" data-html="true"
-        title="{{course_type_description}}"><i class="icon icon-info-sign"></i> {{course_type}}</a>
-      </h3>
-      {{#with location}}
-        <h4><a href="/locations/{{sub_domain}}">{{dhamma_name}}</a></h4>
-        <h5>{{display_name}}</h5>
-        <h5>{{city}}</h5>
-        {{>location_links}}
-      {{/with}}
-    </div>
-  </div>
-  <div id="course-status" class="col-sm-1">
-    {{>course_status}}
-  </div>
-  <div style="text-align:right;" class="col-sm-3">
+  <div class="col-sm-3">
     <h3>
-      <span class="date">{{formatDate course_start_date}}</span> 
-      {{#if course_end_date}}
-      - 
-      <span class="date">{{formatDate course_end_date}}</span>
-      {{/if}}
+      <a class="info" data-placement="bottom" data-toggle="tooltip" href="#" data-html="true"
+      title="{{course_type_description}}"><i class="icon icon-info-sign"></i> {{course_type}}</a>
     </h3>
     <a class="btn btn-apply">Apply</a>
     {{#if comments_html}}
@@ -82,18 +55,38 @@
     </p>
     {{/if}}
   </div>
+  <div class="col-sm-3">
+    <div class="course-info">
+      <h3>
+        <span class="date">{{formatDate course_start_date}}</span> 
+        {{#if course_end_date}}
+        - 
+        <span class="date">{{formatDate course_end_date}}</span>
+        {{/if}}
+      </h3>
+      {{>course_status}}
+    </div>
+  </div>
+  <div id="location" class="col-sm-3">
+    {{#with location}}
+      <h3><a href="/locations/{{sub_domain}}">{{dhamma_name}}</a></h3>
+      <h4>{{city}}, {{country}}</h4>
+      {{>location_links}}
+    {{/with}}
+  </div>
+  <div class="col-sm-3">
+    <div class="location-image-container">
+      {{#with location}}
+      <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
+      {{/with}}
+    </div>
+  </div>
 </div>
 </template>
 
 <template name="course_row">
 <tr class="course-row"> 
-  <td><a class="btn btn-apply">Apply</a></td> 
-  <td class="course-type">
-    <a class="info" data-placement="bottom"
-      data-toggle="tooltip" href="#" data-html="true"
-      title="{{course_type_description}}"><i class="icon icon-info-sign"></i> {{course_type}}</a>
-    <br />
-  </td> 
+  <td><a class="underline" href="#">Apply</a></td> 
   <td class="course-date">
     <span class="date">{{formatDate course_start_date}}</span> 
     {{#if course_end_date}}
@@ -102,17 +95,26 @@
     {{/if}}
     <br />
   </td>
-  {{#if renderCourseLocation}}
-  <td class="location">
-    {{#with location}}
-    {{display_name}}<br />
-    {{>location_links}}
-    {{/with}}
+  <td class="course-type">
+    <a class="info" data-placement="bottom"
+      data-toggle="tooltip" href="#" data-html="true"
+      title="{{course_type_description}}"><i class="icon icon-info-sign"></i> {{course_type}}</a>
+    <br />
   </td> 
-  {{/if}}
   <td>
     {{>course_status}}
   </td> 
+  {{#if renderCourseLocation}}
+  <td class="location">
+    {{#with location}}
+    {{dhamma_name}}<br />
+    {{city}}, {{country}}
+    {{/with}}
+  </td> 
+  <td class="distance">
+     65 miles
+  </td>
+  {{/if}}
   <td class="comments">
     {{comments}}
   </td> 
