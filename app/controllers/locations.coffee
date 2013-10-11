@@ -2,7 +2,7 @@ if Meteor.isClient
   Meteor.subscribe("locations")
   Meteor.subscribe("courses")
 
-  Template.locations.events = 
+  Template.locations_carousel.events = 
     "click .location-link": (e) ->
       e.preventDefault()
       $( "a.location-link" ).removeClass("selected")
@@ -11,10 +11,10 @@ if Meteor.isClient
       $(".location-image-container img").css "top", (i, old) ->
         $(@).css "top", (Math.min( 0, (200 - $(@).height())/2 ) + "px")
   
-  Template.locations.locations = ->
+  Template.locations_carousel.locations = ->
     Locations.find({}, sort: { name: 1 })
     
-  Template.locations.courses = ->
+  Template.locations_carousel.courses = ->
     Courses.find { location_id: @id }, sort: { starts: 1 }
 
   Template.location.courses = ->
@@ -23,7 +23,7 @@ if Meteor.isClient
   Template.location.anyCourses = ->
     Courses.find({ location_id: @id }).count() > 0
 
-  Template.locations.rendered = ->
+  Template.locations_carousel.rendered = ->
     $("#locations-carousel").carouFredSel(
       auto: false
       circular: false
@@ -42,6 +42,4 @@ if Meteor.isClient
     )
 
   Template.location.rendered = ->
-    debugger
     $("#dhamma-name").tooltip()
-

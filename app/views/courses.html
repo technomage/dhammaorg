@@ -1,7 +1,8 @@
 <template name="courses">
 {{willRenderCourseLocation}}
-<h2 style="margin-bottom: 0px;">Courses</h2>
-<div id="course-search">
+<section class="tabbed-header">
+<h2>Courses</h2>
+<div class="tabbed-content" id="course-search">
 {{>course_search}}
 {{>sort}}
 <br />
@@ -22,6 +23,7 @@
 {{#if styleIs "map"}}
 <iframe frameborder=0 height=600 width="100%" src="http://courses.dhamma.org/en/maps/001"></iframe>
 {{/if}}
+</section>
 </template>
 
 <template name="course_header">

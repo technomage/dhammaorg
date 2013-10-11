@@ -1,28 +1,24 @@
 <template name="locations">
 {{willNotRenderCourseLocation}}
-<h2>Locations</h2>
-{{>location_search}}
-<section id="locations">
-<div class="image_carousel">
-  <div id="locations-carousel">
-  {{#each locations}}
-  <div class="carousel-item">
-    <a class="location-link" href="#">
-      <img height=120 width=155 name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" src="{{ header_image_path }}" />
-      <span class="meta">
-        {{dhamma_name}}<br />
-        <span class="small">{{city}}, {{country}}</span>
-      </span>
-    </a>
+<section class="tabbed-header">
+  <h2>Locations</h2>
+  <div class="tabbed-content">
+    <header>
+      Meditation courses are held at both center and non-center locations. Meditation centers are dedicated facilities where courses are held regularly throughout the year. Before meditation centers were established in this tradition, all courses were held at temporary sites, such as campgrounds, religious retreat centers, churches and the like. Today, in regions where centers have not yet been established by local students of Vipassana who live in the area, 10 Day meditation courses are held at non-center course sites.
+    </header>
+    <ul id="location-nav" class="nav nav-tabs">
+      <li class="active">
+        <a href="#directory" data-toggle="tab">Worldwide Directory</a></li>
+      <li>
+        <a href="#search" data-toggle="tab">Nearest Locations</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="directory"></div>
+      <div class="tab-pane" id="search">
+        {{>location_search}}
+      </div>
+    </div>
   </div>
-  {{/each}}
-  </div>
-  <div class="clearfix"></div>
-  <a class="prev" id="locations-prev" href="#"><span>&lt;</span></a>
-  <a class="next" id="locations-next" href="#"><span>&gt;</span></a>
-</div>
-
-<div id="selected-location"> </div>
 </section>
 </template>
 
@@ -64,7 +60,7 @@
       {{/each}}
     </table>
     {{else}}
-      <div style="text-align:center;color:#666">There are currently no courses scheduled at this location.</div>
+    <div style="text-align:center;color:#666">There are currently no courses scheduled at this location.</div>
     {{/if}}
   </div>
 </div>
@@ -76,4 +72,26 @@
   <a target="_blank" class="btn btn-link btn-default" href="{{map}}">Map</a>
   <a target="_blank" class="btn btn-link btn-default" href="mailto:{{contact}}">Contact</a>
 </div>
+</template>
+
+<template name="locations_carousel">
+<div class="image_carousel">
+  <div id="locations-carousel">
+    {{#each locations}}
+    <div class="carousel-item">
+      <a class="location-link" href="#">
+        <img height=120 width=155 name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" src="{{ header_image_path }}" />
+        <span class="meta">
+          {{dhamma_name}}<br />
+          <span class="small">{{city}}, {{country}}</span>
+        </span>
+      </a>
+    </div>
+    {{/each}}
+  </div>
+  <div class="clearfix"></div>
+  <a class="prev" id="locations-prev" href="#"><span>&lt;</span></a>
+  <a class="next" id="locations-next" href="#"><span>&gt;</span></a>
+</div>
+<div id="selected-location"> </div>
 </template>

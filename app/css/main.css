@@ -1,9 +1,5 @@
-/* CSS declarations go here */
-
 body {
-  zoom: 0.9; 
-  -moz-transform: scale(0.9); 
-  -moz-transform-origin: 0 0;
+  font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
 #main-content {
@@ -14,36 +10,35 @@ body {
   margin-bottom: 30px;
 }
 
-#select-layout a {
-  font-size: 11px;
-}
-
 h1,h2,h3,h4,h5,h6 {
   font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   color: #029;
 }
 
 h1 {
-  font-size: 33px;
+  font-size: 30px;
 }
 
 h2 {
-  font-size: 22px;
-  margin: 17px -44px 49px -44px;
-  border-width: 3px 0px 3px 0px;
-  padding: 18px 44px;
+  font-size: 20px;
+  margin: 0px -40px 50px -40px;
+  border-width: 2px 0px;
+  padding: 18px 40px;
   border-style: solid;
-  border-width: 3px 0px 3px 0px;
   border-color: #EFC72A;
   background-color: #FFF7C9;
 }
 
 h3 {
-  font-size: 19px;
+  font-size: 17px;
 }
 
 h4 {
-  font-size: 15px;
+  font-size: 13px;
+}
+
+p {
+  font-size: 12.5px;
 }
 
 hr {
@@ -59,27 +54,15 @@ a:hover {
   color: #029;
 }
 
-body {
-  font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-
-#wrap {
-  
-}
-
-.container {
-  background-color: white;
-}
-
 #main {
   padding: 0px 7%;
 }
 
-#main ul, #main ol {
+ul, ol {
   margin-bottom: 25px;
 }
 
-#main ul.select2-choices, #main ul.nav {
+ul.select2-choices, ul.nav {
   margin-bottom: 0px;
 }
 
@@ -88,15 +71,16 @@ body {
 }
 
 #main p {
+  font-size: 12.5px;
   text-align: justify;
-  margin-bottom: 25px;
-  line-height: 25px;
+  margin-bottom: 23px;
+  line-height: 23px;
   color: #222;
 }
 
 #header-container {
   text-align: center;
-  padding: 25px 0px 20px 6%;
+  padding: 23px 0px 15px 6%;
 }
 
 header #wheel {

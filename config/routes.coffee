@@ -24,7 +24,7 @@ Router.map ->
       locations:
         Locations.find region_id: @id
   @route "location", 
-    path: "/search/locations/:sub_domain"
+    path: "/locations/:sub_domain"
     data: -> Locations.findOne( sub_domain: @params.sub_domain )
   @route "contacts",
     path: "/search/contacts"

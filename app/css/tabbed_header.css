@@ -1,0 +1,63 @@
+.tabbed-header header {
+  padding: 30px 45px 0px;
+  background: #ffffea; /* Old browsers */
+}
+
+.tabbed-header .nav-tabs, .tabbed-header .nav-tabs.nav-justified {
+  border-bottom: solid 1px #EFC72A;
+  margin-bottom: 20px;
+}
+
+.tabbed-header h2 {
+  margin-bottom: 0px;
+}
+
+.tabbed-content {
+  margin: 0px -40px;
+}
+
+.tabbed-header ul {
+  padding: 30px 30px 0px;
+}
+
+.tabbed-header ul.nav-tabs > li {
+  position: relative;
+  bottom: -1px;
+}
+
+.tabbed-header ul.nav-tabs > li.active > a:hover {
+  background-color: white;
+}
+
+.tabbed-header ul.nav-tabs.nav-justified > li > a {
+  border-width: 1px 1px 0px 1px;
+}
+
+.tabbed-header ul.nav-tabs > li.active > a, 
+.tabbed-header ul.nav-tabs > li.active > a:focus {
+  color: #029;
+  border-color: #EFC72A;
+  border-bottom-color: transparent;
+}
+
+.tabbed-header ul.nav > li:not(.active) > a {
+  color: #999;
+}
+
+.tabbed-header ul.nav > li:not(.active) > a:hover, 
+.tabbed-header ul.nav > li:not(.active) > a:focus {
+  color: #029;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.tabbed-header ul.nav, #course-list-setting {
+  background: #ffffea; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffea 46%, #ffffff 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(46%,#ffffea), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffea 46%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffea 46%,#ffffff 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffea 46%,#ffffff 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ffffea 46%,#ffffff 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffea', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}

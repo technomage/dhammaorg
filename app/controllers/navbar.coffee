@@ -1,5 +1,5 @@
 if Meteor.isClient
-  menuItemWidth = 210
+  menuItemWidth = 190
   
   alignSubNavWithParent = (subNav) ->
     parentWidth = $(subNav).parent().width()

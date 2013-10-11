@@ -1,6 +1,6 @@
 #navbar {
   position: relative;
-  margin: 20px auto 0;
+  margin: 18px auto 0;
   width: 94%;
 }
 
@@ -29,12 +29,17 @@
 }
 
 #navbar > li > a {
-  font-size: 16px;
+  font-size: 14px;
   z-index: 30;
 }
 
+#navbar > li:hover > a {
+  font-size: 14px;
+  z-index: 32;
+}
+
 #navbar > li.dropdown > .dropdown-menu {
-  z-index: 1;
+  z-index: 31;
   padding: 45px 0px 10px;
   top: -10px;
   min-width: 0;
@@ -55,9 +60,9 @@
 }
 
 #select-region {
-  z-index: 20;
+  z-index: 31;
   display: none;
-  width: 210px;
+  width: 190px;
   position: absolute;
   top: -8px;
   border: 1px solid #cccccc;
@@ -92,11 +97,15 @@
 
 ul.nav li.dropdown > ul.dropdown-menu {
   text-align: center;
-  width: 210px;
+  width: 190px;
 }
 
-ul.nav li.dropdown:hover > ul.dropdown-menu{
+ul.nav li.dropdown:hover > ul.dropdown-menu {
   display: block;    
+}
+
+ul.nav li.dropdown:hover > a {
+  z-index: 31;
 }
 
 ul.nav ul.dropdown-menu ul.dropdown-menu {
@@ -109,11 +118,3 @@ ul.nav li.active.dropdown a.dropdown-toggle .caret {
   border-top-color: white;
   border-bottom-color: white;
 }
-
-// #nav-region:hover + #select-region {
-//   display: block;
-// }
-// 
-// #select-region:hover {
-//   display: block;
-// }
