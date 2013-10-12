@@ -3,15 +3,21 @@
   top: 20px;
 }
 
+.directory-group {
+  margin: 0px 0px 25px 10px;
+}
+
+.region .directory-group {
+  margin-left: 50px;
+}
+
 .directory-header {
   border-bottom: solid 1px #EFC72A;
-  margin-left: 10px;
   margin-bottom: 15px;
 }
 
 .directory-header h3 {
   display: inline;
-  margin-left: -10px;
 }
 
 .affix-sidebar {
@@ -45,12 +51,14 @@
 }
 
 .directory-list {
-  margin-left: 10%;
+  margin-left: 7%;
 }
 
 .region {
   clear: both;
+  margin-bottom: 20px;
 }
+
 
 .region img {
   margin-right: 10px;
@@ -61,10 +69,15 @@
   display: block;
 }
 
+.region .region .name {
+  font-size: 12px;
+}
+
 .region .name a {
   font-weight: bold;
 }
 
 .region .links {
   font-size: 11px;
+  white-space: nowrap;
 }

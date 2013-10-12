@@ -28,14 +28,18 @@
 <div class="region">
   <img class="pull-left" src="/images/flags/ao.png" width=35 height=35 />
   <span class="name"><a href="#">Angola</a></span>
-  <span class="links">
-    <a href="#">Contact</a>
-    |
-    <a href="#">Courses</a>
-    |
-    <a href="#">Website</a>
-  </span>
+  {{>region_links}}
 </div>
+</template>
+
+<template name="region_links">
+<span class="links">
+  <a href="#">Contact</a>
+  |
+  <a href="#">Courses</a>
+  |
+  <a href="#">Website</a>
+</span>
 </template>
 
 <template name="directory">
@@ -56,125 +60,125 @@
     </div>
   </div>
   <div class="col-sm-9">
-    <header class="directory-header">
-      <a name="africa"></a>
-      <h3>Africa</h3> 
-      <span class="directory-region-details">[ 1 Centers, 15 Non-Centers* ]</span>
-    </header>
-    <div class="row directory-list">
-      <div class="col-sm-4">
-        {{>region}}
+    <a name="africa"></a>
+    <div class="directory-group">
+      <header class="directory-header">
+        <h3>Africa</h3> 
+        <span class="directory-region-details">[ 1 Centers, 15 Non-Centers* ]</span>
+      </header>
+      <div class="row directory-list">
+        <div class="col-md-4">
+          {{>region}}
+        </div>
+        <div class="col-md-4">
+          {{>region}}
+        </div>
+        <div class="col-md-4">
+          {{>region}}
+        </div>
       </div>
-      <div class="col-sm-4">
-        {{>region}}
-      </div>
-      <div class="col-sm-4">
-        {{>region}}
+    </div>
+    <a name="asia"></a>
+    <div class="directory-group">
+      <header class="directory-header">
+        <h3>Asia &amp; Pacific</h3> 
+        <span class="directory-region-details">[ 28 Centers, 5 Non-Centers* ]</span>
+      </header>
+      <div class="row directory-list">
+        <div class="col-md-4">
+          <div class="region">
+            <img class="pull-left" src="/images/flags/kh.png" width=35 height=35 />
+            <span class="name"><a href="#">Cambodia</a></span>
+            {{>region_links}}
+          </div>
+          <div class="region">
+            <img class="pull-left" src="/images/flags/jp.png" width=35 height=35 />
+            <span class="name">
+              <header class="directory-header">
+              <a href="#">Japan</a>
+              <span class="directory-region-details">[ 2 Centers ]</span>
+              </header>
+            </span>
+            <div class="directory-group">
+              <div class="region">
+                <span class="name"><a href="#">Chosei-gun, Chiba-ken</a></span>
+                {{>region_links}}
+              </div>
+              <div class="region">
+                <span class="name"><a href="#">Funai-gun, Kyoto</a></span>
+                {{>region_links}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          {{>region}}
+        </div>
+        <div class="col-md-4">
+          {{>region}}
+        </div>
       </div>
     </div>
   </div>
-  <div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 </div>
 </template>
 
@@ -182,7 +186,7 @@
 <div id="location-panel" class="panel panel-default">
   <div class="panel-body">
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-md-4">
         <div class="location-image-container">
           <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
         </div>
