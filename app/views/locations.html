@@ -13,13 +13,169 @@
         <a href="#search" data-toggle="tab">Nearest Locations</a></li>
     </ul>
     <div class="tab-content">
-      <div class="tab-pane active" id="directory"></div>
+      <div class="tab-pane active" id="directory">
+        {{>directory}}
+      </div>
       <div class="tab-pane" id="search">
         {{>location_search}}
       </div>
     </div>
   </div>
 </section>
+</template>
+
+<template name="region">
+<div class="region">
+  <img class="pull-left" src="/images/flags/ao.png" width=35 height=35 />
+  <span class="name"><a href="#">Angola</a></span>
+  <span class="links">
+    <a href="#">Contact</a>
+    |
+    <a href="#">Courses</a>
+    |
+    <a href="#">Website</a>
+  </span>
+</div>
+</template>
+
+<template name="directory">
+<div class="row">
+  <div class="col-sm-3">
+    <div class="affix-sidebar" data-spy="affix" data-offset-top="200">
+    <ul id="region-list">
+      <li><a href="#africa">Africa</a></li>
+      <li><a href="#asia">Asia &amp; Pacific</a></li>
+      <li><a href="#australia">Australia &amp; New Zealand</a></li>
+      <li><a href="#europe">Europe</a></li>
+      <li><a href="#india">India</a></li>
+      <li><a href="#latin-america">Latin America</a></li>
+      <li><a href="#middle-east">Middle East</a></li>
+      <li><a href="#myanmar">Myanmar</a></li>
+      <li><a href="#north-america">North America</a></li>
+    </ul>
+    </div>
+  </div>
+  <div class="col-sm-9">
+    <header class="directory-header">
+      <a name="africa"></a>
+      <h3>Africa</h3> 
+      <span class="directory-region-details">[ 1 Centers, 15 Non-Centers* ]</span>
+    </header>
+    <div class="row directory-list">
+      <div class="col-sm-4">
+        {{>region}}
+      </div>
+      <div class="col-sm-4">
+        {{>region}}
+      </div>
+      <div class="col-sm-4">
+        {{>region}}
+      </div>
+    </div>
+  </div>
+  <div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
 </template>
 
 <template name="location">

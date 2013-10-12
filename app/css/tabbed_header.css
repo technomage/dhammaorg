@@ -1,6 +1,6 @@
-.tabbed-header header {
+.tabbed-content > header {
   padding: 30px 45px 0px;
-  background: #ffffea; /* Old browsers */
+  background: #ffffea;
 }
 
 .tabbed-header .nav-tabs, .tabbed-header .nav-tabs.nav-justified {
@@ -16,7 +16,7 @@
   margin: 0px -40px;
 }
 
-.tabbed-header ul {
+.tabbed-header ul.nav {
   padding: 30px 30px 0px;
 }
 

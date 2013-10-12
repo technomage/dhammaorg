@@ -45,6 +45,10 @@
   min-width: 0;
 }
 
+#navbar > li#nav-region > a {
+  z-index: 32;
+}
+
 #navbar .dropdown-menu > li > a {
   white-space: normal;
   color: #029;

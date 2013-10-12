@@ -1,0 +1,70 @@
+#directory {
+  position: relative;
+  top: 20px;
+}
+
+.directory-header {
+  border-bottom: solid 1px #EFC72A;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+.directory-header h3 {
+  display: inline;
+  margin-left: -10px;
+}
+
+.affix-sidebar {
+  border: solid 1px #EFC72A;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #ffffea 47%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#ffffea)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#ffffea 47%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,#ffffea 47%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#ffffea 47%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,#ffffea 47%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffea',GradientType=0 ); /* IE6-9 */
+}
+
+.affix-sidebar.affix {
+  position: fixed;
+  top: 10px;
+}
+
+#region-list {
+  padding: 0px;
+  margin: 5px;
+}
+
+#region-list li {
+  list-style-type: none;
+  padding: 5px;
+}
+
+.directory-list {
+  margin-left: 10%;
+}
+
+.region {
+  clear: both;
+}
+
+.region img {
+  margin-right: 10px;
+}
+
+.region .name {
+  margin: 5px 0px -4px;
+  display: block;
+}
+
+.region .name a {
+  font-weight: bold;
+}
+
+.region .links {
+  font-size: 11px;
+}

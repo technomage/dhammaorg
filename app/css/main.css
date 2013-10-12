@@ -2,6 +2,10 @@ body {
   font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+#top {
+  margin-bottom: 18px;
+}
+
 #main-content {
   margin: 0px 4%;
 }
@@ -21,7 +25,7 @@ h1 {
 
 h2 {
   font-size: 20px;
-  margin: 0px -40px 50px -40px;
+  margin: 0px -40px 40px -40px;
   border-width: 2px 0px;
   padding: 18px 40px;
   border-style: solid;
@@ -46,6 +50,10 @@ hr {
   border-color: #ddd;
 }
 
+ul, ol {
+  margin-bottom: 25px;
+}
+
 a, .btn-link {
   color: #029;
 }
@@ -58,8 +66,18 @@ a:hover {
   padding: 0px 7%;
 }
 
-ul, ol {
-  margin-bottom: 25px;
+#main .tooltip-inner p {
+  text-align: left;
+  font-size: 13px;
+  line-height: 16px;
+  color: white;
+  margin-bottom: 0px;
+  padding: 5px;
+}
+
+#main .tooltip p a {
+  color: #ccc;
+  font-weight: bold;
 }
 
 ul.select2-choices, ul.nav {

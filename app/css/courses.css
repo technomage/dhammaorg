@@ -2,27 +2,13 @@
   padding-top: 20px;
 }
 
-#main .tooltip-inner p {
-  text-align: left;
-  font-size: 13px;
-  line-height: 16px;
-  color: white;
-  margin-bottom: 0px;
-  padding: 5px;
-}
-
-#main .tooltip p a {
-  color: #ccc;
-  font-weight: bold;
-}
-
 .results-table {
   color: #029;
+  font-size: 13px;
 }
 
 .results-table thead {
   font-weight: bold;
-  font-size: 16px;
 }
 
 .results-table thead td {
