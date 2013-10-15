@@ -5,6 +5,7 @@
 .results-table {
   color: #029;
   font-size: 13px;
+  margin-top: 30px;
 }
 
 .results-table thead {
@@ -28,6 +29,11 @@ table.results-table tr td {
   white-space: nowrap;
   display: block;
   padding-left: 21px;
+  margin-bottom: 8px;
+}
+
+td .status:last-child {
+  margin-bottom: 0px;
 }
 
 .date {
@@ -37,15 +43,16 @@ table.results-table tr td {
 .status-open {
   background: url(/images/statuses/open.png) left no-repeat;
   background-size: 16px;
-  
 }
 
 .status-waitlist {
-  color: orange;
+  background: url(/images/statuses/waitlist.png) left no-repeat;
+  background-size: 16px;
 }
 
 .status-closed, .status-long_waitlist {
-  color: red;
+  background: url(/images/statuses/closed.png) left no-repeat;
+  background-size: 16px;
 }
 
 #search-dates {
@@ -61,7 +68,6 @@ table.results-table tr td {
   padding: 9px 18px;
   border: solid #EFC72A;
   border-width: 1px 0px;
-  margin-bottom: 30px;
 }
 
 .btn-apply {
@@ -88,6 +94,10 @@ table.results-table tr td {
   padding: 8px 0px 8px 33px;
 }
 
+.table thead > tr > th:last-child, .table tbody > tr > th:last-child, .table tfoot > tr > th:last-child, .table thead > tr > td:last-child, .table tbody > tr > td:last-child, .table tfoot > tr > td:last-child {
+  padding-right: 33px;
+}
+
 #course-list-setting .btn.active {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -110,5 +120,9 @@ table.results-table tr td {
 }
 
 .course.row {
-  padding: 0px 22px;
+  padding: 0px 30px;
+}
+
+.course.row .course-location {
+  padding-left: 5px;
 }

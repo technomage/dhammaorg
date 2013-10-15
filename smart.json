@@ -4,7 +4,7 @@
     "momentjs": {},
     "bootstrap-3": {},
     "bootstrap-datepicker2": {},
-    "router": {},
+    "iron-router": {},
     "select2": {},
     "npm": {},
     "carouFredSel": {},

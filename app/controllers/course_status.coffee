@@ -13,5 +13,10 @@ if Meteor.isClient
       "Open"
     else
       null
+    
+  Template.course_status.statuses = ->
+    men: "open"
+    women: "waitlist"
+    server: "closed"
   
   Template.course_status.statusClass = -> "open"

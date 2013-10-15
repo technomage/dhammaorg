@@ -1,6 +1,7 @@
 #directory {
   position: relative;
   top: 20px;
+  margin: 0px 30px;
 }
 
 .directory-group {
@@ -14,6 +15,7 @@
 .directory-header {
   border-bottom: solid 1px #EFC72A;
   margin-bottom: 15px;
+  padding-bottom: 2px;
 }
 
 .directory-header h3 {
@@ -42,7 +44,7 @@
 
 #region-list {
   padding: 0px;
-  margin: 5px;
+  margin: 15px;
 }
 
 #region-list li {

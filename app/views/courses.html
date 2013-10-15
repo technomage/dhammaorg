@@ -44,11 +44,8 @@
 
 <template name="course">
 <div class="course row">
-  <div class="col-sm-3">
-    <h3>
-      <a class="info" data-placement="bottom" data-toggle="tooltip" href="#" data-html="true"
-      title="{{course_type_description}}"><i class="icon icon-info-sign"></i> {{course_type}}</a>
-    </h3>
+  <div class="col-sm-2">
+    <h3></h3>
     <a class="btn btn-apply">Apply</a>
     {{#if comments_html}}
     <p class="comments">
@@ -66,15 +63,21 @@
         <span class="date">{{formatDate course_end_date}}</span>
         {{/if}}
       </h3>
-      {{>course_status}}
+      <h4>
+        <a class="info" data-placement="bottom" data-toggle="tooltip" href="#" data-html="true"
+        title="{{course_type_description}}"><i class="icon icon-info-sign"></i> {{course_type}}</a>
+      </h4>
+      <h4>{{>course_status}}</h4>
     </div>
   </div>
-  <div id="location" class="col-sm-3">
+  <div class="col-sm-4">
+    <div class="course-location">
     {{#with location}}
       <h3><a href="/locations/{{sub_domain}}">{{dhamma_name}}</a></h3>
       <h4>{{city}}, {{country}}</h4>
-      {{>location_links}}
+      <h4>{{>location_links}}</h4>
     {{/with}}
+    </div>
   </div>
   <div class="col-sm-3">
     <div class="location-image-container">
@@ -125,7 +128,9 @@
 
 <template name="course_status">
 {{#if status}}
-<span class="status status-{{statusClass}}">{{status}}</span>
+<span class="status status-open">Men: Open</span>
+<span class="status status-waitlist">Women: Waitlist</span>
+<span class="status status-closed">Servers: Closed</span>
 {{else}}
   {{#key_value statuses}}
   <div class="status">

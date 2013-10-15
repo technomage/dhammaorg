@@ -1,15 +1,27 @@
 #navbar {
-  position: relative;
   margin: 18px auto 0;
   width: 94%;
 }
 
-#navbar li {
-  text-align: center;
+#nav-home, #nav-region {
+  width: 10%;
 }
 
-#navbar li#nav-region {
-  text-align: left;
+#nav-about, #nav-search {
+  width: 18%;
+}
+
+#nav-resources {
+  width: 20%;
+}
+
+#nav-special-sites {
+  width: 22%;
+}
+
+#navbar li {
+  text-align: center;
+  position: relative;
 }
 
 #navbar.nav-pills > li > a:hover,

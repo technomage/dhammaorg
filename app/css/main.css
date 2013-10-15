@@ -27,7 +27,7 @@ h2 {
   font-size: 20px;
   margin: 0px -40px 40px -40px;
   border-width: 2px 0px;
-  padding: 18px 40px;
+  padding: 18px 30px;
   border-style: solid;
   border-color: #EFC72A;
   background-color: #FFF7C9;
@@ -195,4 +195,9 @@ blockquote {
 
 .select2-container-multi .select2-choices .select2-search-field input {
   font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.nav-quarters li {
+  width: 25%;
+  text-align: center;
 }
