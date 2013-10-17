@@ -1,10 +1,14 @@
 <template name="location_search">
-<div id="location-search" class="input-group search-panel">
-  <span class="input-group-addon">
-    <i class="glyphicon glyphicon-globe"></i> World
-  </span>
-  <input class="form-control" id="region-search" type="hidden"
-  data-placeholder="Select Location, Airport, State/Province, Country or Region"></select>
+<div id="location-search" class="search-panel">
+  <div class="row">
+    <div class="col-sm-10">
+      <input class="form-control" id="region-search" type="hidden"
+      data-placeholder="Select Location, Airport, State/Province, Country or Region" />
+    </div>
+    <div class="col-sm-2">
+      <a href="/search/locations" class="btn btn-apply center" style="width:100%;"><i class="glyphicon glyphicon-search"></i></a>
+    </div>
+  </div>
 </div>
 <div id="course-list-setting" class="search-toolbar btn-toolbar">
   <div class="row">
