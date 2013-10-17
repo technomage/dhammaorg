@@ -1,12 +1,30 @@
 <template name="sort">
-<div id="course-list-setting" class="btn-toolbar">
-  <div class="btn-group">
-    <a id="view-table" class="btn btn-link {{activeIfTable}}">
-      <i class="glyphicon glyphicon-list-alt icon-white"></i> Table</a>
-    <a id="view-list" class="btn btn-link {{activeIfList}}">
-      <i class="glyphicon glyphicon-th-list icon-white"></i> List</a>
-    <a id="view-map" class="btn btn-link {{activeIfMap}}">
-      <i class="glyphicon glyphicon-globe icon-white"></i> Map</a>
+<div id="course-list-setting" class="search-toolbar btn-toolbar">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="btn-group">
+        <a id="view-table" class="btn btn-link disabled">View:</a>
+        <a id="view-table" class="btn btn-link {{activeIfTable}}">Table</a>
+        <a id="view-list" class="btn btn-link {{activeIfList}}">List</a>
+        <a id="view-map" class="btn btn-link {{activeIfMap}}">Map</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="btn-group">
+        <a id="view-table" class="btn btn-link disabled">Filter:</a>
+        <a id="view-table" class="btn btn-link active">None</a>
+        <a id="view-list" class="btn btn-link">Centers</a>
+        <a id="view-map" class="btn btn-link">Status</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="btn-group pull-right">
+        <a id="view-table" class="btn btn-link disabled">Group:</a>
+        <a id="view-table" class="btn btn-link active">None</a>
+        <a id="view-list" class="btn btn-link">Locations</a>
+        <a id="view-map" class="btn btn-link">Type</a>
+      </div>
+    </div>
   </div>
 </div>
 </template>

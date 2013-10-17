@@ -64,10 +64,6 @@ td.location img {
   text-decoration: underline;
 }
 
-.center {
-  text-align: center;
-}
-
 #selected-location .location-links {
   margin-bottom: 20px;
 }

@@ -1,12 +1,36 @@
 <template name="location_search">
-<div id="location-search" class="input-group">
+<div id="location-search" class="input-group search-panel">
   <span class="input-group-addon">
     <i class="glyphicon glyphicon-globe"></i> World
   </span>
-  <select multiple class="form-control" id="region-search" data-placeholder="Search by region">
-    {{#each regions}}
-      <option>{{name}}</option>
-    {{/each}}
-  </select>
+  <input class="form-control" id="region-search" type="hidden"
+  data-placeholder="Select Location, Airport, State/Province, Country or Region"></select>
+</div>
+<div id="course-list-setting" class="search-toolbar btn-toolbar">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="btn-group">
+        <a class="btn btn-link disabled">Show Top:</a>
+        <a class="btn btn-link active">25</a>
+        <a class="btn btn-link">50</a>
+        <a class="btn btn-link">100</a>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="btn-group">
+        <a class="btn btn-link disabled">View:</a>
+        <a id="view-list" class="btn btn-link {{activeIfList}}">List</a>
+        <a id="view-carousel" class="btn btn-link {{activeIfCarousel}}">Carousel</a>
+        <a id="view-map" class="btn btn-link {{activeIfMap}}">Map</a>
+      </div>
+      <div class="btn-group pull-right">
+        <a id="view-table" class="btn btn-link disabled">Filter:</a>
+        <a id="view-table" class="btn btn-link">Clear</a>
+        <a id="view-table" class="btn btn-link active">Location Type</a>
+        <a id="view-list" class="btn btn-link">Course Type</a>
+        <a id="view-map" class="btn btn-link">Status</a>
+      </div>
+    </div>
+  </div>
 </div>
 </template>

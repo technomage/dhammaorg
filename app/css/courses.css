@@ -59,7 +59,7 @@ td .status:last-child {
   height: 83px;
 }
 
-#course-search-panel {
+.search-panel {
   padding: 5px 30px;
   margin-bottom: 0px;
 }

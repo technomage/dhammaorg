@@ -201,3 +201,15 @@ blockquote {
   width: 25%;
   text-align: center;
 }
+
+.center {
+  text-align: center;
+}
+
+.search-toolbar a {
+  font-size: 13px;
+}
+
+.search-toolbar .btn {
+  padding: 6px 8px;
+}
