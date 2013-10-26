@@ -11,6 +11,7 @@ Router.map ->
   @route "home", path: "/"
   @route "courses", path: "/search/courses"
   @route "locations", path: "/search/locations"
+  @route "locations", path: "/search/directory"
   @route "regions",
     path: "/search/regions"
     data: ->

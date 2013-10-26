@@ -202,6 +202,10 @@ blockquote {
   text-align: center;
 }
 
+.nav-quarters li a {
+  white-space: nowrap;
+}
+
 .center {
   text-align: center;
 }

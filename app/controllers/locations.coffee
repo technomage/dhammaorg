@@ -1,6 +1,8 @@
 if Meteor.isClient
   Meteor.subscribe("locations")
   Meteor.subscribe("courses")
+  
+  Template.locations.styleIs = (style) -> Session.get("locationViewStyle") == style
 
   Template.locations_carousel.events = 
     "click .location-link": (e) ->
@@ -12,6 +14,9 @@ if Meteor.isClient
         $(@).css "top", (Math.min( 0, (200 - $(@).height())/2 ) + "px")
   
   Template.locations_carousel.locations = ->
+    Locations.find({}, sort: { name: 1 })
+    
+  Template.locations.locations = ->
     Locations.find({}, sort: { name: 1 })
     
   Template.locations_carousel.courses = ->
@@ -37,7 +42,7 @@ if Meteor.isClient
         button: "#locations-next"
         key: "right"
       onCreate: (data) ->
-        leftMargin = ( $("#locations").width() - 46 - data.width )/2
+        leftMargin = ( $("#nearest-locations").width() - 46 - data.width )/2
         if leftMargin > 0 then $(@).parent().css( "margin-left", leftMargin )
     )
 

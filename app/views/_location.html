@@ -1,0 +1,43 @@
+<template name="location">
+<div id="location-panel" class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="location-image-container">
+          <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="location-body">
+          <div class="location-info">
+            <h3>{{display_name}}</h3>
+            <h4 id="dhamma-name" title="{{dhamma_name_meaning}}">
+              {{dhamma_name}}
+              {{#if dhamma_name_meaning}}
+              <span class="dhamma-name-meaning"> - {{dhamma_name_meaning}}</span>
+              {{/if}}
+            </h4>
+            <h4>{{city}}, {{country}}</h4>
+          </div>
+          {{>location_links}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="panel-footer">
+    {{#if anyCourses}}
+    <h4>Courses at this location:</h4>
+    {{!>course_search}}
+    <table class="results-table table">
+      {{>course_header}}
+      {{#each courses}}
+      {{>course_row}}
+      {{/each}}
+    </table>
+    {{else}}
+    <div style="text-align:center;color:#666">There are currently no courses scheduled at this location.</div>
+    {{/if}}
+  </div>
+</div>
+</template>

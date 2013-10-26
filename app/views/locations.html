@@ -7,17 +7,28 @@
       Meditation courses are held at both center and non-center locations. Meditation centers are dedicated facilities where courses are held regularly throughout the year. Before meditation centers were established in this tradition, all courses were held at temporary sites, such as campgrounds, religious retreat centers, churches and the like. Today, in regions where centers have not yet been established by local students of Vipassana who live in the area, 10 Day meditation courses are held at non-center course sites.
     </header>
     <ul id="location-nav" class="nav nav-tabs nav-quarters">
-      <li class="active">
-        <a href="#directory" data-toggle="tab">Worldwide Directory</a></li>
-      <li>
-        <a href="#search" data-toggle="tab">Nearest Locations</a></li>
+      <li class="{{activeIfCurrentPage 'search/directory'}}">
+        <a href="/search/directory">Worldwide Directory</a></li>
+      <li class="{{activeIfCurrentPage 'search/locations'}}">
+        <a href="/search/locations">Nearest Locations</a></li>
     </ul>
     <div class="tab-content">
-      <div class="tab-pane active" id="directory">
+      <div id="directory" class="tab-pane {{activeIfCurrentPage 'search/directory'}}">
         {{>directory}}
       </div>
-      <div class="tab-pane" id="search">
+      <div id="nearest-locations" class="tab-pane {{activeIfCurrentPage 'search/locations'}}">
         {{>location_search}}
+        {{#if styleIs "list"}}
+          {{#each locations}}
+            {{>location_list_item}}
+          {{/each}}
+        {{/if}}
+        {{#if styleIs "carousel"}}
+          {{>locations_carousel}}
+        {{/if}}
+        {{#if styleIs "map"}}
+          <iframe frameborder=0 height=600 width="100%" src="http://courses.dhamma.org/en/maps/001"></iframe>
+        {{/if}}
       </div>
     </div>
   </div>
@@ -40,190 +51,6 @@
   |
   <a href="#">Website</a>
 </span>
-</template>
-
-<template name="directory">
-<div class="row">
-  <div class="col-sm-3">
-    <div class="affix-sidebar" data-spy="affix" data-offset-top="200">
-    <ul id="region-list">
-      <li><a href="#africa">Africa</a></li>
-      <li><a href="#asia">Asia &amp; Pacific</a></li>
-      <li><a href="#australia">Australia &amp; New Zealand</a></li>
-      <li><a href="#europe">Europe</a></li>
-      <li><a href="#india">India</a></li>
-      <li><a href="#latin-america">Latin America</a></li>
-      <li><a href="#middle-east">Middle East</a></li>
-      <li><a href="#myanmar">Myanmar</a></li>
-      <li><a href="#north-america">North America</a></li>
-    </ul>
-    </div>
-  </div>
-  <div class="col-sm-9">
-    <a name="africa"></a>
-    <div class="directory-group">
-      <header class="directory-header">
-        <h3>Africa</h3> 
-        <span class="directory-region-details">[ 1 Centers, 15 Non-Centers* ]</span>
-      </header>
-      <div class="row directory-list">
-        <div class="col-md-4">
-          {{>region}}
-        </div>
-        <div class="col-md-4">
-          {{>region}}
-        </div>
-        <div class="col-md-4">
-          {{>region}}
-        </div>
-      </div>
-    </div>
-    <a name="asia"></a>
-    <div class="directory-group">
-      <header class="directory-header">
-        <h3>Asia &amp; Pacific</h3> 
-        <span class="directory-region-details">[ 28 Centers, 5 Non-Centers* ]</span>
-      </header>
-      <div class="row directory-list">
-        <div class="col-md-4">
-          <div class="region">
-            <img class="pull-left" src="/images/flags/kh.png" width=35 height=35 />
-            <span class="name"><a href="#">Cambodia</a></span>
-            {{>region_links}}
-          </div>
-          <div class="region">
-            <img class="pull-left" src="/images/flags/jp.png" width=35 height=35 />
-            <span class="name">
-              <header class="directory-header">
-              <a href="#">Japan</a>
-              <span class="directory-region-details">[ 2 Centers ]</span>
-              </header>
-            </span>
-            <div class="directory-group">
-              <div class="region">
-                <span class="name"><a href="#">Chosei-gun, Chiba-ken</a></span>
-                {{>region_links}}
-              </div>
-              <div class="region">
-                <span class="name"><a href="#">Funai-gun, Kyoto</a></span>
-                {{>region_links}}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          {{>region}}
-        </div>
-        <div class="col-md-4">
-          {{>region}}
-        </div>
-      </div>
-    </div>
-  </div>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-</div>
-</template>
-
-<template name="location">
-<div id="location-panel" class="panel panel-default">
-  <div class="panel-body">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="location-image-container">
-          <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
-        </div>
-      </div>
-      <div class="col-sm-8">
-        <div class="location-body">
-          <div class="location-info">
-            <h3>{{display_name}}</h3>
-            <h4 id="dhamma-name" title="{{dhamma_name_meaning}}">
-              {{dhamma_name}}
-              {{#if dhamma_name_meaning}}
-              <span class="dhamma-name-meaning"> - {{dhamma_name_meaning}}</span>
-              {{/if}}
-            </h4>
-            <h4>{{city}}, {{country}}</h4>
-          </div>
-          {{>location_links}}
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-  <div class="panel-footer">
-    {{#if anyCourses}}
-    <h4>Courses at this location:</h4>
-    {{!>course_search}}
-    <table class="results-table table">
-      {{>course_header}}
-      {{#each courses}}
-      {{>course_row}}
-      {{/each}}
-    </table>
-    {{else}}
-    <div style="text-align:center;color:#666">There are currently no courses scheduled at this location.</div>
-    {{/if}}
-  </div>
-</div>
 </template>
 
 <template name="location_links">
@@ -254,4 +81,16 @@
   <a class="next" id="locations-next" href="#"><span>&gt;</span></a>
 </div>
 <div id="selected-location"> </div>
+</template>
+
+<template name="location_list_item">
+<div class="row">
+  <div class="col-sm-3">
+    <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
+  </div>
+  <div class="col-sm-9">
+    <h3>{{dhamma_name}}</h3>
+    <h4>{{city}}, {{country}}</h4>
+  </div>
+</div>
 </template>

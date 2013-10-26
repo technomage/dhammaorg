@@ -1,5 +1,5 @@
 if Meteor.isClient
-  Session.setDefault "locationViewStyle", "list"
+  Session.setDefault "locationViewStyle", "carousel"
   
   Template.location_search.events = 
     "click #view-carousel": -> Session.set "locationViewStyle", "carousel"
@@ -9,27 +9,36 @@ if Meteor.isClient
   Template.location_search.activeIfCarousel = -> "active" if Session.get("locationViewStyle") == "carousel"
   Template.location_search.activeIfList = -> "active" if Session.get("locationViewStyle") == "list"
   Template.location_search.activeIfMap = -> "active" if Session.get("locationViewStyle") == "map"
-  Template.location_search.styleIs = (style) -> Session.get("locationViewStyle") == style
-    
+  
   Template.location_search.rendered = ->
     $("#region-search").select2(
       width: "100%"
+      multiple: true
       data: 
         more: false
         results: [
-          text: "Western" 
+          text: "Locations" 
           children: [ 
-            id: "CA"
-            text: "California"
+            id: "DK"
+            text: "Dhamma Kharuna"
           , 
-            id: "AZ"
-            text: "Arizona" 
+            id: "DKU"
+            text: "Dhamma Kunja" 
           ]
         ,
-          text: "Eastern"
+          text: "Regions"
           children: [ 
-            id: "FL"
-            text: "Florida"
+            id: "USA"
+            text: "United States"
+          ,
+            id: "UK"
+            text: "United Kindom"
+          ]
+        ,
+          text: "Contacts"
+          children: [ 
+            id: "dunn"
+            text: "Jeremy Dunn"
           ]
         ]
     )

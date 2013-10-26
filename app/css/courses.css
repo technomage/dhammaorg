@@ -64,7 +64,7 @@ td .status:last-child {
   margin-bottom: 0px;
 }
 
-#course-list-setting {
+.search-toolbar {
   padding: 9px 18px;
   border: solid #EFC72A;
   border-width: 1px 0px;
@@ -98,20 +98,20 @@ td .status:last-child {
   padding-right: 33px;
 }
 
-#course-list-setting .btn.active {
+.search-toolbar .btn.active {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-#course-list-setting .btn-link {
+.search-toolbar .btn-link {
   color: #999;
 }
 
-#course-list-setting .btn-link:hover {
+.search-toolbar .btn-link:hover {
   text-decoration: none;
 }
 
-#course-list-setting .btn-link.active {
+.search-toolbar .btn-link.active {
   color: #029;
 }
 
