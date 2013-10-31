@@ -10,7 +10,7 @@
       <li class="{{activeIfCurrentPage 'search/directory'}}">
         <a href="/search/directory">Worldwide Directory</a></li>
       <li class="{{activeIfCurrentPage 'search/locations'}}">
-        <a href="/search/locations">Nearest Locations</a></li>
+        <a href="/search/locations">Search Locations</a></li>
     </ul>
     <div class="tab-content">
       <div id="directory" class="tab-pane {{activeIfCurrentPage 'search/directory'}}">
@@ -18,9 +18,11 @@
       </div>
       <div id="nearest-locations" class="tab-pane {{activeIfCurrentPage 'search/locations'}}">
         {{>location_search}}
+        <br />
         {{#if styleIs "list"}}
           {{#each locations}}
             {{>location_list_item}}
+            <hr />
           {{/each}}
         {{/if}}
         {{#if styleIs "carousel"}}
@@ -35,26 +37,9 @@
 </section>
 </template>
 
-<template name="region">
-<div class="region">
-  <img class="pull-left" src="/images/flags/ao.png" width=35 height=35 />
-  <span class="name"><a href="#">Angola</a></span>
-  {{>region_links}}
-</div>
-</template>
-
-<template name="region_links">
-<span class="links">
-  <a href="#">Contact</a>
-  |
-  <a href="#">Courses</a>
-  |
-  <a href="#">Website</a>
-</span>
-</template>
-
 <template name="location_links">
 <div class="location-links">
+  <a target="_blank" href="#">Courses</a>&nbsp;&nbsp;
   <a target="_blank" href="{{website}}">Website</a>&nbsp;&nbsp;
   <a target="_blank" href="{{map}}">Map</a>&nbsp;&nbsp;
   <a target="_blank" href="mailto:{{contact}}">Contact</a>
@@ -84,13 +69,14 @@
 </template>
 
 <template name="location_list_item">
-<div class="row">
+<div class="list-item row">
   <div class="col-sm-3">
     <img name="{{sub_domain}}" onerror="console.log($(this).attr('name'))" class="location-image" src="{{ header_image_path }}" />
   </div>
   <div class="col-sm-9">
     <h3>{{dhamma_name}}</h3>
     <h4>{{city}}, {{country}}</h4>
+    <h4>{{>location_links}}</h4>
   </div>
 </div>
 </template>

@@ -60,12 +60,12 @@ td .status:last-child {
 }
 
 .search-panel {
-  padding: 5px 30px;
+  padding: 5px 3%;
   margin-bottom: 0px;
 }
 
 .search-toolbar {
-  padding: 9px 18px;
+  padding: 9px 2.2%;
   border: solid #EFC72A;
   border-width: 1px 0px;
 }
@@ -91,11 +91,11 @@ td .status:last-child {
 }
 
 .table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
-  padding: 8px 0px 8px 33px;
+  padding: 8px 0px 8px 3%;
 }
 
 .table thead > tr > th:last-child, .table tbody > tr > th:last-child, .table tfoot > tr > th:last-child, .table thead > tr > td:last-child, .table tbody > tr > td:last-child, .table tfoot > tr > td:last-child {
-  padding-right: 33px;
+  padding-right: 3%;
 }
 
 .search-toolbar .btn.active {
@@ -119,8 +119,8 @@ td .status:last-child {
   background-color: #eff2ff;
 }
 
-.course.row {
-  padding: 0px 30px;
+.list-item.row {
+  padding: 0px 3%;
 }
 
 .course.row .course-location {

@@ -1,18 +1,24 @@
 #navbar {
   margin: 18px auto 0;
-  width: 94%;
 }
 
 #nav-home, #nav-region {
-  width: 10%;
+  width: 8%;
 }
 
-#nav-about, #nav-search {
-  width: 18%;
+#nav-home   { margin-right: 2% }
+#nav-region { margin-left: 2% }
+
+#nav-about {
+  width: 19%;
+}
+
+#nav-search {
+  width: 19%;
 }
 
 #nav-resources {
-  width: 20%;
+  width: 22%;
 }
 
 #nav-special-sites {

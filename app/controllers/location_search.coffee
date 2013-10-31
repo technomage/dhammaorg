@@ -1,5 +1,5 @@
 if Meteor.isClient
-  Session.setDefault "locationViewStyle", "carousel"
+  Session.setDefault "locationViewStyle", "list"
   
   Template.location_search.events = 
     "click #view-carousel": -> Session.set "locationViewStyle", "carousel"

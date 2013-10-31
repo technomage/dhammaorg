@@ -1,5 +1,5 @@
 .tabbed-content > header {
-  padding: 30px 30px 0px;
+  padding: 30px 3% 0px;
   text-align: justify;
   background: #ffffea;
 }
@@ -13,12 +13,8 @@
   margin-bottom: 0px;
 }
 
-.tabbed-content {
-  margin: 0px -40px;
-}
-
 .tabbed-header ul.nav {
-  padding: 30px 30px 0px;
+  padding: 30px 3% 0px;
 }
 
 .tabbed-header ul.nav-tabs > li.active > a:hover {

@@ -10,6 +10,10 @@ body {
   margin: 0px 4%;
 }
 
+.static-content {
+  margin: 0px 3%;
+}
+
 #home-content figure {
   margin-bottom: 30px;
 }
@@ -25,9 +29,9 @@ h1 {
 
 h2 {
   font-size: 20px;
-  margin: 0px -40px 40px -40px;
+  margin: 0px 0px 40px;
   border-width: 2px 0px;
-  padding: 18px 30px;
+  padding: 18px 3%;
   border-style: solid;
   border-color: #EFC72A;
   background-color: #FFF7C9;
@@ -60,10 +64,6 @@ a, .btn-link {
 
 a:hover {
   color: #029;
-}
-
-#main {
-  padding: 0px 7%;
 }
 
 #main .tooltip-inner p {
@@ -171,11 +171,11 @@ article.panel, article.panel .panel-heading, article.panel .panel-footer, #locat
 }
 
 article.panel .panel-heading {
-  padding: 15px 25px 20px;
+  padding: 15px 3% 20px;
 }
 
 article.panel .panel-body {
-  padding: 25px 25px 0px;
+  padding: 25px 3% 0px;
 }
 
 blockquote {
