@@ -2,6 +2,8 @@ body {
   font-family: "Trebuchet MS", helvetica, verdana, arial, tahoma, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+@media (min-width: 1200px) { .container { max-width: 1070px !important; } }
+
 #top {
   margin-bottom: 18px;
 }
