@@ -18,6 +18,7 @@
 
 table.results-table tr td {
   border-top: 1px dotted #dddddd;
+  border-width: 1px 0px 0px;
 }
 
 .comments, .hint {
@@ -90,13 +91,13 @@ td .status:last-child {
   background: #3485F0;
 }
 
-.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
-  padding: 8px 0px 8px 3%;
-}
-
-.table thead > tr > th:last-child, .table tbody > tr > th:last-child, .table tfoot > tr > th:last-child, .table thead > tr > td:last-child, .table tbody > tr > td:last-child, .table tfoot > tr > td:last-child {
-  padding-right: 3%;
-}
+// .table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
+//   padding: 8px 0px 8px 3%;
+// }
+// 
+// .table thead > tr > th:last-child, .table tbody > tr > th:last-child, .table tfoot > tr > th:last-child, .table thead > tr > td:last-child, .table tbody > tr > td:last-child, .table tfoot > tr > td:last-child {
+//   padding-right: 3%;
+// }
 
 .search-toolbar .btn.active {
   -webkit-box-shadow: none;

@@ -15,9 +15,11 @@
 {{#if styleIs "table"}}
   <table class="results-table table table-hover">
   {{>course_header}}
+  <tbody>
   {{#each courses}}
     {{>course_row}}
   {{/each}}
+</tbody>
   </table>
 {{/if}}
 {{#if styleIs "map"}}
@@ -29,15 +31,16 @@
 <template name="course_header">
 <thead>
   <tr>
+    <td width="2%"></td>
     <td>Attend/Serve</td>
     <td>Dates<img src="/images/sort.gif" /></td>
     <td>Type<img src="/images/sort.gif" /></td>
     <td>Status<img src="/images/sort.gif" /></td>
     {{#if renderCourseLocation}}
     <td>Location<img src="/images/sort.gif" /></td>
-    <td>Distance<img src="/images/sort.gif" /></td>
     {{/if}}
     <td>Comments</td>
+    <td width="2%"></td>
   </tr>
 </thead>
 </template>
@@ -91,6 +94,7 @@
 
 <template name="course_row">
 <tr class="course-row"> 
+  <td width="2%"></td>
   <td><a class="btn btn-apply btn-sm" href="#">Apply</a></td> 
   <td class="course-date">
     <span class="date">{{formatDate course_start_date}}</span> 
@@ -116,13 +120,11 @@
     {{city}}, {{country}}
     {{/with}}
   </td> 
-  <td class="distance">
-     65 miles
-  </td>
   {{/if}}
   <td class="comments">
     {{comments}}
   </td> 
+  <td width="2%"></td>
 </tr>
 </template>
 
