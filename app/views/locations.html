@@ -1,40 +1,35 @@
 <template name="locations">
 {{willNotRenderCourseLocation}}
 <section class="tabbed-header">
-  <h2>Locations</h2>
-  <div class="tabbed-content">
-    <header>
-      Meditation courses are held at both center and non-center locations. Meditation centers are dedicated facilities where courses are held regularly throughout the year. Before meditation centers were established in this tradition, all courses were held at temporary sites, such as campgrounds, religious retreat centers, churches and the like. Today, in regions where centers have not yet been established by local students of Vipassana who live in the area, 10 Day meditation courses are held at non-center course sites.
-    </header>
-    <ul id="location-nav" class="nav nav-tabs nav-quarters">
-      <li class="{{activeIfCurrentPage 'search/directory'}}">
-        <a href="/search/directory">Worldwide Directory</a></li>
-      <li class="{{activeIfCurrentPage 'search/locations'}}">
-        <a href="/search/locations">Search Locations</a></li>
-    </ul>
-    <div class="tab-content">
-      <div id="directory" class="tab-pane {{activeIfCurrentPage 'search/directory'}}">
-        {{>directory}}
-      </div>
-      <div id="nearest-locations" class="tab-pane {{activeIfCurrentPage 'search/locations'}}">
-        {{>location_search}}
-        <br />
-        {{#if styleIs "list"}}
-          {{#each locations}}
-            {{>location_list_item}}
-            <hr />
-          {{/each}}
-        {{/if}}
-        {{#if styleIs "carousel"}}
-          {{>locations_carousel}}
-        {{/if}}
-        {{#if styleIs "map"}}
-          <iframe frameborder=0 height=600 width="100%" src="http://courses.dhamma.org/en/maps/001"></iframe>
-        {{/if}}
-      </div>
-    </div>
-  </div>
+<h2>Locations</h2>
+  <header>
+    Meditation courses are held at both center and non-center locations. Meditation centers are dedicated facilities where courses are held regularly throughout the year. Before meditation centers were established in this tradition, all courses were held at temporary sites, such as campgrounds, religious retreat centers, churches and the like. Today, in regions where centers have not yet been established by local students of Vipassana who live in the area, 10 Day meditation courses are held at non-center course sites.
+  </header>
+  <ul id="location-nav" class="nav nav-tabs nav-quarters">
+    <li class="{{activeIfCurrentPage 'search/directory'}}">
+      <a href="/search/directory">Worldwide Directory</a></li>
+    <li class="{{activeIfCurrentPage 'search/locations'}}">
+      <a href="/search/locations">Search Locations</a></li>
+  </ul>
 </section>
+<div class="tab-content">
+  <div id="directory" class="tab-pane {{activeIfCurrentPage 'search/directory'}}">
+    {{>directory}}
+  </div>
+  <div id="nearest-locations" class="tab-pane {{activeIfCurrentPage 'search/locations'}}">
+    {{>location_search}}
+    <br />
+    {{#if styleIs "list"}}
+      {{#each locations}}
+        {{>location_list_item}}
+        <hr />
+      {{/each}}
+    {{/if}}
+    {{#if styleIs "carousel"}}
+      {{>locations_carousel}}
+    {{/if}}
+  </div>
+</div>
 </template>
 
 <template name="location_links">

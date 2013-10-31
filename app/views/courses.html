@@ -2,10 +2,11 @@
 {{willRenderCourseLocation}}
 <section class="tabbed-header">
 <h2>Courses</h2>
-<div class="tabbed-content" id="course-search">
+<div id="course-search">
 {{>course_search}}
 {{>sort}}
-<br />
+</div>
+</section>
 {{#if styleIs "list"}}
 {{#each courses}}
 {{>course}}
@@ -25,7 +26,6 @@
 {{#if styleIs "map"}}
 <iframe frameborder=0 height=600 width="100%" src="http://courses.dhamma.org/en/maps/001"></iframe>
 {{/if}}
-</section>
 </template>
 
 <template name="course_header">
@@ -39,7 +39,7 @@
     {{#if renderCourseLocation}}
     <td>Location<img src="/images/sort.gif" /></td>
     {{/if}}
-    <td>Comments</td>
+    <td class="align-right">Comments</td>
     <td width="2%"></td>
   </tr>
 </thead>

@@ -1,4 +1,8 @@
-.tabbed-content > header {
+.tabbed-header {
+  margin-bottom: 20px;
+}
+
+.tabbed-header > header {
   padding: 30px 3% 0px;
   text-align: justify;
   background: #ffffea;
